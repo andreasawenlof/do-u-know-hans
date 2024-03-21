@@ -133,18 +133,21 @@ const quizStructure = [
     },
 ]
 
-const quizStructureCopy = [...quizStructure];
+let quizStructureCopy = [...quizStructure];
 
 function createQuestion() {
     const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
     const randomQuestion = quizStructureCopy[randomIndex];
     document.getElementById('listen-button').innerHTML = randomQuestion.question;
+    const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
+    quizStructureCopy = newArrayWithoutIndex;
+
 
     const audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = randomQuestion.audio.url;
 }
 
-function removeIndexfromArray(arr, index) {
+function removeIndexFromArray(arr, index) {
     const firstHalf = arr.slice(0, index);
     const secondHalf = arr.slice(index+1);
     const newArrayWithoutIndex = firstHalf.concat(secondHalf);
@@ -155,6 +158,10 @@ createQuestion();
 
 function audioPlay() {
     document.getElementById('audio-player').play();
+}
+
+function choices() {
+    
 }
 
 document.getElementById('listen-button').addEventListener('click', audioPlay);
