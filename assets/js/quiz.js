@@ -146,7 +146,21 @@ function createQuestion() {
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
     quizStructureCopy = newArrayWithoutIndex;
     const listenButton = document.getElementById('listen-button').innerHTML = randomQuestion.question;
-    choices(randomQuestion);
+    
+    //Add Choice Buttons
+    const choiceElement = document.getElementById('choices');
+    let choiceButtons = '';
+    for (const [choice, answer] of Object.entries(randomQuestion.choices)) {
+        choiceButtons += `<button id='${choice}'>${answer}</button>`;
+    }
+
+    choiceElement.innerHTML = choiceButtons;
+
+    for (const [choice, answer] of Object.entries(randomQuestion.choices)) {
+        const choiceButtonElement = document.getElementById(choice);
+        choiceButtonElement.addEventListener('click', createAnswerEventListener(choice, randomQuestion.correctAnswer));
+    }
+
 
     if(quizStructureCopy.length === 0) {
         window.location.href = 'score.html';
@@ -164,6 +178,33 @@ function removeIndexFromArray(arr, index) {
     return newArrayWithoutIndex;
 }
 
+function createAnswerEventListener(pickedAnswer, correctAnswer) {
+    const answerEventListener = () => {
+        const isCorrect = correctAnswer === pickedAnswer;
+        if(pickedAnswer === correctAnswer) {
+            scoreCount(1, 0)
+        } else {
+            scoreCount(1,0);
+        }
+        return answerEventListener;
+    }
+     
+}
+
+function scoreCount(correct, incorrect) {
+    correctScore = document.getElementById('correct-score');
+    incorrectScore = document.getElementById('incorrect-score');
+    correct.innerHTML = 0;
+    incorrect.innerHTML = 0;
+    if(isCorrect) {
+        correctScore.innerHTML = `${correct} + 1`;
+    } else {
+        incorrectScore.innerHTML = `${incorrect} + 1`;
+    }
+    
+ 
+}
+
 createQuestion();
 
 function audioPlay() {
@@ -172,6 +213,7 @@ function audioPlay() {
     audioPlayer.play();
 }
 
+/*
 function choices(obj) {
     let choiceA = document.getElementById('choice-one-button');
     let choiceB = document.getElementById('choice-two-button');
@@ -183,6 +225,7 @@ function choices(obj) {
     choiceB.innerHTML = choiceObjB;
     choiceC.innerHTML = choiceObjC;
 }
+*/
 
 function setupEventListener() {
     document.getElementById('listen-button').addEventListener('click', audioPlay);
