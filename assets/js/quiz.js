@@ -139,4 +139,20 @@ function createQuestion() {
     const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
     const randomQuestion = quizStructureCopy[randomIndex];
     document.getElementById('listen-button').innerHTML = randomQuestion.question;
+
+    let listenButton = document.getElementById('listen-button');
+    const audioPlayer = document.getElementById('audio-player');
+    audioPlayer.src = randomQuestion.audio.url;
 }
+
+createQuestion();
+
+function audioPlay() {
+    const listenButton = document.getElementById('listen-button');
+    const audioPlayer = document.getElementById('audio-player');
+    audioPlayer.play();
+}
+
+document.getElementById('listen-button').addEventListener('click', audioPlay);
+
+
