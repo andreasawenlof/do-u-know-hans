@@ -148,7 +148,10 @@ function createQuestion() {
     const listenButton = document.getElementById('listen-button').innerHTML = randomQuestion.question;
     choices(randomQuestion);
 
-    
+    if(quizStructureCopy.length === 0) {
+        window.location.href = 'score.html';
+    }
+
 
     const audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = randomQuestion.audio.url;
