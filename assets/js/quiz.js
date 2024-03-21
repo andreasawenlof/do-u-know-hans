@@ -140,17 +140,21 @@ function createQuestion() {
     const randomQuestion = quizStructureCopy[randomIndex];
     document.getElementById('listen-button').innerHTML = randomQuestion.question;
 
-    let listenButton = document.getElementById('listen-button');
     const audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = randomQuestion.audio.url;
+}
+
+function removeIndexfromArray(arr, index) {
+    const firstHalf = arr.slice(0, index);
+    const secondHalf = arr.slice(index+1);
+    const newArrayWithoutIndex = firstHalf.concat(secondHalf);
+    return newArrayWithoutIndex;
 }
 
 createQuestion();
 
 function audioPlay() {
-    const listenButton = document.getElementById('listen-button');
-    const audioPlayer = document.getElementById('audio-player');
-    audioPlayer.play();
+    document.getElementById('audio-player').play();
 }
 
 document.getElementById('listen-button').addEventListener('click', audioPlay);
