@@ -8,7 +8,8 @@ const nameInputSubmit = localStorage.getItem('name');
 document.getElementById('goodJobName').innerHTML = `Well done, ${nameInputSubmit.toUpperCase()}!`;
 
 function playAgain() {
-    localStorage.clear();
+    localStorage.removeItem('correctScore');
+    localStorage.removeItem('incorrectScore');
     window.location.href = 'quiz.html';
 }
 

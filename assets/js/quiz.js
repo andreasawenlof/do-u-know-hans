@@ -137,13 +137,18 @@ let quizStructureCopy = [...quizStructure];
 
 function quizInit() {
     quizStructureCopy = [...quizStructure];
+    document.getElementById('play-again').style.display = 'none';
     createQuestion();
+    document.getElementById('listen-button').style.display = 'block';
+    document.getElementById('choices').style.display = 'block';
     document.getElementById('correct-score').innerHTML = 0;
+    document.getElementById('correct-score').style.display = 'none';
     document.getElementById('incorrect-score').innerHTML = 0;
+    document.getElementById('incorrect-score').style.display = 'none';
 }
 
 function createRandomNumberRange(startNumber, endNumber) {
-    return Math.floor(Math.random() * (endNumber - startNumber) + startNumber);
+    return Math.floor(Math.random() * (endNumber - startNumber + 1) + startNumber);
 }
 
 function createQuestion() {
