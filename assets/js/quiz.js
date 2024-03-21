@@ -186,11 +186,12 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
             const correctCounterElement = document.getElementById('correct-score');
             const correctCounter = Number(correctCounterElement.innerHTML) + 1; 
             correctCounterElement.innerHTML = correctCounter;   
+            localStorage.setItem('correctScore', correctCounter);
         } else {
             const incorrectCounterElement = document.getElementById('incorrect-score');
             const incorrectCounter = Number(incorrectCounterElement.innerHTML) + 1;
             incorrectCounterElement.innerHTML = incorrectCounter;
-
+            localStorage.setItem('incorrectScore', incorrectCounter);
         }
     }
     return answerEventListener;
