@@ -157,8 +157,9 @@ function createQuestion() {
     choiceElement.innerHTML = choiceButtons;
 
     for (const [choice, answer] of Object.entries(randomQuestion.choices)) {
+        console.log(`Key: ${choice}, Value: ${answer}`);
         const choiceButtonElement = document.getElementById(choice);
-        choiceButtonElement.addEventListener('click', createAnswerEventListener(choice, randomQuestion.correctAnswer));
+        choiceButtonElement.addEventListener('click', createAnswerEventListener(randomQuestion.correctAnswer, choice));
     }
 
 
@@ -178,31 +179,21 @@ function removeIndexFromArray(arr, index) {
     return newArrayWithoutIndex;
 }
 
-function createAnswerEventListener(pickedAnswer, correctAnswer) {
+function createAnswerEventListener(correctAnswer, pickedAnswer) {
     const answerEventListener = () => {
         const isCorrect = correctAnswer === pickedAnswer;
-        if(pickedAnswer === correctAnswer) {
-            scoreCount(1, 0)
+        if(isCorrect) {
+            const correctCounterElement = document.getElementById('correct-score');
+            const correctCounter = Number(correctCounterElement.innerHTML) + 1; 
+            correctCounterElement.innerHTML = correctCounter;   
         } else {
-            scoreCount(1,0);
-        }
-        return answerEventListener;
-    }
-     
-}
+            const incorrectCounterElement = document.getElementById('incorrect-score');
+            const incorrectCounter = Number(incorrectCounterElement.innerHTML) + 1;
+            incorrectCounterElement.innerHTML = incorrectCounter;
 
-function scoreCount(correct, incorrect) {
-    correctScore = document.getElementById('correct-score');
-    incorrectScore = document.getElementById('incorrect-score');
-    correct.innerHTML = 0;
-    incorrect.innerHTML = 0;
-    if(isCorrect) {
-        correctScore.innerHTML = `${correct} + 1`;
-    } else {
-        incorrectScore.innerHTML = `${incorrect} + 1`;
+        }
     }
-    
- 
+    return answerEventListener;
 }
 
 createQuestion();
