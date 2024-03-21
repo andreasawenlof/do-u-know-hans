@@ -9,7 +9,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Batman',
@@ -21,7 +21,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Dune',
@@ -33,7 +33,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'The Last Samurai',
@@ -45,7 +45,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Sherlock',
@@ -57,7 +57,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Man of Steel',
@@ -69,7 +69,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Inception',
@@ -81,7 +81,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Pirates',
@@ -93,7 +93,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Rush',
@@ -105,7 +105,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Lion King',
@@ -117,7 +117,7 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
     {
         question: 'Gladiator',
@@ -129,6 +129,10 @@ const quizStructure = [
             b: 'choice-two',
             c: 'choice-three',
         },
-        correctAnswer: b
+        correctAnswer: 'b'
     },
 ]
+
+const quiStructureCopy = [...quizStructure];
+
+console.log(quiStructureCopy);
