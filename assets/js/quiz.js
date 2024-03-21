@@ -135,13 +135,18 @@ const quizStructure = [
 
 let quizStructureCopy = [...quizStructure];
 
+function createRandomNumberRange(endNumber) {
+    return Math.floor(Math.random() * endNumber - 1);
+}
+
 function createQuestion() {
-    const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
+    const randomIndex = createRandomNumberRange(quizStructureCopy.length);
+    //const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
     const randomQuestion = quizStructureCopy[randomIndex];
-    document.getElementById('listen-button').innerHTML = randomQuestion.question;
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
     quizStructureCopy = newArrayWithoutIndex;
-
+    const listenButton = document.getElementById('listen-button');
+    listenButton.innerHTML = `${randomQuestion.question}`;
     choices(randomQuestion);
 
 
@@ -159,7 +164,9 @@ function removeIndexFromArray(arr, index) {
 createQuestion();
 
 function audioPlay() {
-    document.getElementById('audio-player').play();
+    const audioPlayer = document.getElementById('audio-player');
+
+    audioPlayer.play();
 }
 
 function choices(obj) {
@@ -174,6 +181,12 @@ function choices(obj) {
     choiceC.innerHTML = choiceObjC;
 }
 
-document.getElementById('listen-button').addEventListener('click', audioPlay);
+function setupEventListener() {
+    document.getElementById('listen-button').addEventListener('click', audioPlay);
+    document.getElementById('choices').addEventListener('click', createQuestion);
+}
+
+setupEventListener();
+
 
 
