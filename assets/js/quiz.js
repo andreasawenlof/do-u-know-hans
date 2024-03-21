@@ -149,10 +149,10 @@ let quizStructureCopy = [...quizStructure];
 
 function quizInit() {
     quizStructureCopy = [...quizStructure];
-    document.getElementById('play-again').style.display = 'none';
     createQuestion();
+    document.getElementById('play-again').style.display = 'none';
     document.getElementById('listen-button').style.display = 'block';
-    document.getElementById('choices').style.display = 'block';
+    document.getElementById('choices').style.display = 'flex';
     document.getElementById('correct-score').innerHTML = 0;
     document.getElementById('correct-score').style.display = 'none';
     document.getElementById('incorrect-score').innerHTML = 0;
