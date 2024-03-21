@@ -2,7 +2,7 @@ const quizStructure = [
     {
         question: 'Interstellar',
         audio: {
-            url: 'src'
+            url: 'assets/audio/interstellar.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -14,7 +14,7 @@ const quizStructure = [
     {
         question: 'Batman',
         audio: {
-            url: 'src'
+            url: 'assets/audio/darkKnight.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -26,7 +26,7 @@ const quizStructure = [
     {
         question: 'Dune',
         audio: {
-            url: 'src'
+            url: 'assets/audio/dune.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -38,7 +38,7 @@ const quizStructure = [
     {
         question: 'The Last Samurai',
         audio: {
-            url: 'src'
+            url: 'assets/audio/lastSamurai.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -50,7 +50,7 @@ const quizStructure = [
     {
         question: 'Sherlock',
         audio: {
-            url: 'src'
+            url: 'assets/audio/sherlock.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -62,7 +62,7 @@ const quizStructure = [
     {
         question: 'Man of Steel',
         audio: {
-            url: 'src'
+            url: 'assets/audio/manOfSteel.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -74,7 +74,7 @@ const quizStructure = [
     {
         question: 'Inception',
         audio: {
-            url: 'src'
+            url: 'assets/audio/inception.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -86,7 +86,7 @@ const quizStructure = [
     {
         question: 'Pirates',
         audio: {
-            url: 'src'
+            url: 'assets/audio/pirates.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -98,7 +98,7 @@ const quizStructure = [
     {
         question: 'Rush',
         audio: {
-            url: 'src'
+            url: 'assets/audio/rush.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -110,7 +110,7 @@ const quizStructure = [
     {
         question: 'Lion King',
         audio: {
-            url: 'src'
+            url: 'assets/audio/lionKing.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -122,7 +122,7 @@ const quizStructure = [
     {
         question: 'Gladiator',
         audio: {
-            url: 'src'
+            url: 'assets/audio/gladiator.mp3'
         },
         choices: {
             a: 'choice-one',
@@ -131,5 +131,4 @@ const quizStructure = [
         },
         correctAnswer: b
     },
-
 ]
