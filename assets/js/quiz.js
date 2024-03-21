@@ -209,6 +209,8 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
             localStorage.setItem('incorrectScore', incorrectCounter);
         }
         createQuestion();
+        const player = document.getElementById('audio-player');
+        player.pause();
     }
     return answerEventListener;
 }
@@ -218,20 +220,6 @@ function audioPlay() {
 
     audioPlayer.play();
 }
-
-/*
-function choices(obj) {
-    let choiceA = document.getElementById('choice-one-button');
-    let choiceB = document.getElementById('choice-two-button');
-    let choiceC = document.getElementById('choice-three-button');
-    const choiceObjA = obj.choices.a;
-    const choiceObjB = obj.choices.b;
-    const choiceObjC = obj.choices.c;
-    choiceA.innerHTML = choiceObjA;
-    choiceB.innerHTML = choiceObjB;
-    choiceC.innerHTML = choiceObjC;
-}
-*/
 
 function setupEventListener() {
     document.getElementById('listen-button').addEventListener('click', audioPlay);
