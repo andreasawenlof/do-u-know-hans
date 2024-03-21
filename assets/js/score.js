@@ -1,5 +1,5 @@
-const correctScoreTotal = localStorage.getItem('correctScore');
-const incorrectScoreTotal = localStorage.getItem('incorrectScore');
+const correctScoreTotal = Number(localStorage.getItem('correctScore'));
+const incorrectScoreTotal = Number(localStorage.getItem('incorrectScore'));
 
 document.getElementById('correctScore').innerHTML = `Correct Answers: ${correctScoreTotal}`;
 document.getElementById('incorrectScore').innerHTML = `Wrong Answers: ${incorrectScoreTotal}`;
