@@ -5,9 +5,9 @@ const quizStructure = [
             url: 'assets/audio/interstellar.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Inception',
+            b: 'Interstellar',
+            c: 'Dune',
         },
         correctAnswer: 'b'
     },
@@ -17,11 +17,11 @@ const quizStructure = [
             url: 'assets/audio/darkKnight.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Rush',
+            b: 'Dunkirk',
+            c: 'Batman',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'c'
     },
     {
         question: 'Dune',
@@ -29,11 +29,11 @@ const quizStructure = [
             url: 'assets/audio/dune.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Dune',
+            b: 'Interstellar',
+            c: 'Inception',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     {
         question: 'The Last Samurai',
@@ -41,11 +41,11 @@ const quizStructure = [
             url: 'assets/audio/lastSamurai.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Pirates',
+            b: 'Gladiator',
+            c: 'Last Samurai',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'c'
     },
     {
         question: 'Sherlock',
@@ -53,9 +53,9 @@ const quizStructure = [
             url: 'assets/audio/sherlock.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Man of Steel',
+            b: 'Sherlock',
+            c: 'Inception',
         },
         correctAnswer: 'b'
     },
@@ -65,11 +65,11 @@ const quizStructure = [
             url: 'assets/audio/manOfSteel.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Man of Steel',
+            b: 'Gladiator',
+            c: 'Rush',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     {
         question: 'Inception',
@@ -77,9 +77,9 @@ const quizStructure = [
             url: 'assets/audio/inception.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Dunkirk',
+            b: 'Inception',
+            c: 'Dune',
         },
         correctAnswer: 'b'
     },
@@ -89,11 +89,11 @@ const quizStructure = [
             url: 'assets/audio/pirates.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Last Samurai',
+            b: 'Lion King',
+            c: 'Pirates',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'c'
     },
     {
         question: 'Rush',
@@ -101,11 +101,11 @@ const quizStructure = [
             url: 'assets/audio/rush.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Rush',
+            b: 'Dunkirk',
+            c: 'Inception',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     {
         question: 'Lion King',
@@ -113,9 +113,9 @@ const quizStructure = [
             url: 'assets/audio/lionKing.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Sherlock',
+            b: 'Lion King',
+            c: 'Interstellar',
         },
         correctAnswer: 'b'
     },
@@ -125,11 +125,23 @@ const quizStructure = [
             url: 'assets/audio/gladiator.mp3'
         },
         choices: {
-            a: 'choice-one',
-            b: 'choice-two',
-            c: 'choice-three',
+            a: 'Rush',
+            b: 'Man of Steel',
+            c: 'Gladiator',
         },
-        correctAnswer: 'b'
+        correctAnswer: 'c'
+    },
+    {
+        question: 'Dunkirk',
+        audio: {
+            url: 'assets/audio/dunkirk.mp3'
+        },
+        choices: {
+            a: 'Dunkirk',
+            b: 'Inception',
+            c: 'Dune',
+        },
+        correctAnswer: 'a'
     },
 ]
 
@@ -152,7 +164,7 @@ function createRandomNumberRange(startNumber, endNumber) {
 }
 
 function createQuestion() {
-    const randomIndex = createRandomNumberRange(0, quizStructureCopy.length - 1);
+    const randomIndex = createRandomNumberRange(0, quizStructureCopy.length - 2);
     //const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
     const randomQuestion = quizStructureCopy[randomIndex];
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
