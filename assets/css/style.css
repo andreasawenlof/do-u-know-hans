@@ -12,7 +12,41 @@ body {
     background-repeat: no-repeat;
 }
 
+#quiz-section {
+    width: 100%;
+}
 
+
+#choices {
+    width: 100%;
+    margin-left: 13%;
+    margin-bottom: 10px;
+}
+
+#listen-button {
+    width: 50%;
+    height: 100px;
+    margin-top: 15px;
+    margin-bottom: 200px;
+    margin-left: 27%;
+    background-color: #3A001E;
+    color: #FFDBEE;
+    font-size: 60px;
+    border: 3px solid #A14276;
+    border-radius: 15px;
+}
+
+#a, #b, #c {
+
+    width: 75%;
+    margin-top: 20px;
+    height: 60px;
+    background-color: #A14276;
+    color: #FFDBEE;
+    font-size: 32px;
+    border: 3px solid #3A001E;
+    border-radius: 10px;
+}
 
 
 

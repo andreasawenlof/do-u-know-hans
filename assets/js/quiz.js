@@ -157,7 +157,6 @@ function createQuestion() {
     const randomQuestion = quizStructureCopy[randomIndex];
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
     quizStructureCopy = newArrayWithoutIndex;
-    document.getElementById('listen-button').innerHTML = randomQuestion.question;
     if(quizStructureCopy > 0) {
         quizStructureCopy;
     }
