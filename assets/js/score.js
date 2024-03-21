@@ -1,5 +1,12 @@
 const correctScoreTotal = localStorage.getItem('correctScore');
 const incorrectScoreTotal = localStorage.getItem('incorrectScore');
 
-document.getElementById('correct-score').innerHTML = `Correct Answers: ${correctScoreTotal}`;
-document.getElementById('incorrect-score').innerHTML = `Wrong Answers: ${incorrectScoreTotal}`;
+document.getElementById('correctScore').innerHTML = `Correct Answers: ${correctScoreTotal}`;
+document.getElementById('incorrectScore').innerHTML = `Wrong Answers: ${incorrectScoreTotal}`;
+
+function playAgain() {
+    localStorage.clear();
+    window.location.href = 'quiz.html';
+}
+
+document.getElementById('play-again').addEventListener('click', playAgain);
