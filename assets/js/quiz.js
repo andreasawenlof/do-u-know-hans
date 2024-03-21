@@ -135,20 +135,20 @@ const quizStructure = [
 
 let quizStructureCopy = [...quizStructure];
 
-function createRandomNumberRange(endNumber) {
-    return Math.floor(Math.random() * endNumber - 1);
+function createRandomNumberRange(startNumber, endNumber) {
+    return Math.floor(Math.random() * (endNumber - startNumber) + startNumber);
 }
 
 function createQuestion() {
-    const randomIndex = createRandomNumberRange(quizStructureCopy.length);
+    const randomIndex = createRandomNumberRange(0, quizStructureCopy.length - 1);
     //const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
     const randomQuestion = quizStructureCopy[randomIndex];
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
     quizStructureCopy = newArrayWithoutIndex;
-    const listenButton = document.getElementById('listen-button');
-    listenButton.innerHTML = `${randomQuestion.question}`;
+    const listenButton = document.getElementById('listen-button').innerHTML = randomQuestion.question;
     choices(randomQuestion);
 
+    
 
     const audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = randomQuestion.audio.url;
