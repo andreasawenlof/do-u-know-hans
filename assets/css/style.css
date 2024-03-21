@@ -39,6 +39,23 @@ body {
     gap: 15px;
 }
 
+#choices button {
+    width: 75%;
+    height: 60px;
+    background-color: #A14276;
+    color: #FFDBEE;
+    font-size: 32px;
+    border: 3px solid #3A001E;
+    border-radius: 10px;
+}
+
+#choices button:hover {
+
+        background-color: #3A001E;
+        color:#FFDBEE;
+        border-color: #A14276;
+    }
+
 #listen-button {
     width: 50%;
     height: 100px;
@@ -49,15 +66,9 @@ body {
     border-radius: 15px;
 }
 
-#a, #b, #c {
-
-    width: 75%;
-    height: 60px;
+#listen-button:hover {
     background-color: #A14276;
-    color: #FFDBEE;
-    font-size: 32px;
-    border: 3px solid #3A001E;
-    border-radius: 10px;
+    color: #3A001E;
 }
 
 #play-again-field {
