@@ -2,3 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-image: url('../images/zimmerBack.webp');
+    background-size: 450%;
+    background-position-x: 48%;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+
