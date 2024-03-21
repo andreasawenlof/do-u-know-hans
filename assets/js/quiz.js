@@ -135,6 +135,13 @@ const quizStructure = [
 
 let quizStructureCopy = [...quizStructure];
 
+function quizInit() {
+    quizStructureCopy = [...quizStructure];
+    createQuestion();
+    document.getElementById('correct-score').innerHTML = 0;
+    document.getElementById('incorrect-score').innerHTML = 0;
+}
+
 function createRandomNumberRange(startNumber, endNumber) {
     return Math.floor(Math.random() * (endNumber - startNumber) + startNumber);
 }
@@ -197,8 +204,6 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
     return answerEventListener;
 }
 
-createQuestion();
-
 function audioPlay() {
     const audioPlayer = document.getElementById('audio-player');
 
@@ -222,9 +227,13 @@ function choices(obj) {
 function setupEventListener() {
     document.getElementById('listen-button').addEventListener('click', audioPlay);
     document.getElementById('choices').addEventListener('click', createQuestion);
+    document.getElementById('play-again').addEventListener('click', quizInit);
 }
 
+
 setupEventListener();
+quizInit();
+
 
 
 
