@@ -133,6 +133,10 @@ const quizStructure = [
     },
 ]
 
-const quiStructureCopy = [...quizStructure];
+const quizStructureCopy = [...quizStructure];
 
-console.log(quiStructureCopy);
+function createQuestion() {
+    const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
+    const randomQuestion = quizStructureCopy[randomIndex];
+    document.getElementById('listen-button').innerHTML = randomQuestion.question;
+}
