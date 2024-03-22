@@ -27,12 +27,12 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    height: 100px;
+    margin-bottom: 50px;
 }
 
 #submit-button {
     width: 75%;
-    height: 100px;
+    height: 70px;
 }
 
 #quiz-section {
