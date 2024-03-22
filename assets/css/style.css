@@ -217,11 +217,7 @@ p {
 #play-again {
     width: 75%;
     height: 80px;
-    background-color: #A14276;
-    color: #FFDBEE;
-    font-size: 32px;
-    border: 3px solid #3A001E;
-    border-radius: 10px;
+    font-size: 24px;
 }
 
 .type-two-button {
@@ -268,12 +264,20 @@ p {
     body {
         background-size: 200%;
     }
+
+    #choices {
+        margin-bottom: 40px;
+    }
+
     #choices button {
         max-width: 500px;
         margin-top: 5px;
     }
     #listen-button {
         max-width: 200px;
+    }
+    #play-again {
+        font-size: 32px;
     }
 }
 
