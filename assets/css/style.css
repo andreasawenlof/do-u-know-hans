@@ -201,7 +201,7 @@ span i {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -223,18 +223,35 @@ span i {
 
 
 #score-title {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
     color: #FFDBEE;
     text-align: center;
+    margin: 0px 2px;
+    margin-top: 25px;
 }
+
+#score-field {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 #correctScore,
 #incorrectScore {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 30px;
     color: #FFDBEE;
+}
 
+#incorrectScore span, #correctScore span {
+    font-size: 40px;
+}
+
+
+#correctScore {
+    margin-bottom: 0px;
 }
 
 #play-again-field {
@@ -242,7 +259,7 @@ span i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 #play-again {
@@ -364,6 +381,9 @@ span i {
     .text-field {
         height: 70%;
     }
+    #play-again {
+        max-width: 400px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (height: 1024px) {
@@ -402,5 +422,11 @@ span i {
     }
     #error {
         margin-top: 200px;
+    }
+    #score-field {
+        height: 550px;
+    }
+    h1 {
+        font-size: 50px;
     }
 }

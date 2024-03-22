@@ -1,8 +1,8 @@
 const correctScoreTotal = Number(localStorage.getItem('correctScore'));
 const incorrectScoreTotal = Number(localStorage.getItem('incorrectScore'));
 
-document.getElementById('correctScore').innerHTML = `Correct Answers: ${correctScoreTotal}`;
-document.getElementById('incorrectScore').innerHTML = `Incorrect Answers: ${incorrectScoreTotal}`;
+document.getElementById('correctScore').innerHTML = `<span>${correctScoreTotal}</span> Correct <br>Answers `;
+document.getElementById('incorrectScore').innerHTML = `<span>${incorrectScoreTotal}</span> Incorrect <br>Answers`;
 
 const nameInputSubmit = localStorage.getItem('name');
 document.getElementById('goodJobName').innerHTML = `Well done, ${nameInputSubmit.toUpperCase()}!`;
