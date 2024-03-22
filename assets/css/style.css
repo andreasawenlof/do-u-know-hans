@@ -88,7 +88,7 @@ span i {
     justify-content: center;
     width: 100%;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #enter-button {
@@ -183,7 +183,7 @@ span i {
 }
 
 #choices button {
-    font-size: 32px;
+    font-size: 24px;
     width: 75%;
     height: 60px;
 }
@@ -330,34 +330,27 @@ span i {
     }
 
     #choices {
-        margin-bottom: 70px;
+        margin-bottom: 30px;
     }
 
     #choices button {
-        margin-top: 15px;
+        font-size: 28px;
         max-width: 400px;
+        height: 70px;
+        margin-bottom: 20px;
     }
-}
-
-@media only screen and (min-width: 440px) {
-    body {
-        background-size: cover;
+    #listen-button {
+        height: 120px;
     }
-}
-
-#choices button {
-    max-width: 400px;
-    margin-top: 5px;
 }
 
 @media only screen and (min-width: 768px) {
     body {
         background-size: cover;
     }
-
     #choices button {
         max-width: 400px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     #enter-button {
@@ -411,7 +404,8 @@ span i {
 
     #choices button {
         max-width: 400px;
-        margin-top: 5px;
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     #name {
