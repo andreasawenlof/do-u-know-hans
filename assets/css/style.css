@@ -90,6 +90,11 @@ body {
     font-weight: 700;
 }
 
+#submit-button:disabled {
+
+    background-color: #777;
+}
+
 #quiz-section {
     display: flex;
     flex-direction: column;
@@ -192,7 +197,7 @@ body {
     border-radius: 10px;
 }
 
-.type-one-button:hover {
+.type-one-button:hover:not(:disabled) {
     background-color: #A14276;
     color: #3A001E;
     border: 3px solid #3A001E;
@@ -205,10 +210,11 @@ body {
     border-radius: 10px;
 }
 
-.type-two-button:hover {
+.type-two-button:hover:not(:disabled) {
     background-color: #3A001E;
     color: #FFDBEE;
     border-color: #A14276;
+    
 }
 
 /* Media Queries */

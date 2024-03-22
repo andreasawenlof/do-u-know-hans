@@ -11,11 +11,14 @@ function submitButtonDisable() {
     const nameField = document.getElementById('name').value;
     if(nameField !== '') {
         submit.disabled = false;
+    } else if (nameField === '') {
+        submit.disabled = true;
     }
+
 }
 
 submit.disabled = true;
 
 
-nameInput.addEventListener('keydown', submitButtonDisable);
+nameInput.addEventListener('keyup', submitButtonDisable);
 submit.addEventListener('click', onSubmitButtonClick);
