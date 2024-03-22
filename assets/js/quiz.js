@@ -177,7 +177,7 @@ function createQuestion() {
     const choiceElement = document.getElementById('choices');
     let choiceButtons = '';
     for (const [choice, answer] of Object.entries(randomQuestion.choices)) {
-        choiceButtons += `<button id='${choice}' class="type-two-button">${answer}</button>`;
+        choiceButtons += `<button id='${choice}' class="type-one-button">${answer}</button>`;
     }
 
     choiceElement.innerHTML = choiceButtons;

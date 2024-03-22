@@ -95,9 +95,6 @@ span i {
     width: 80%;
     height: 60px;
     font-size: 28px;
-    font-family: monospace;
-    color: #FFDBEE;
-    border-radius: 10px;
 }
 
 #name-area {
@@ -318,12 +315,8 @@ span i {
 
     .type-two-button:hover:not(:disabled) {
         background-color: #3A001E;
-        color: #FFDBEE;
+        color:#A14276;
         border-color: #A14276;
-    }
-
-    #enter-button:hover {
-        border: 3px solid #3A001E;
     }
 
 }
@@ -428,7 +421,7 @@ span i {
         margin-top: 200px;
     }
     #score-field {
-        height: 400px;
+        height: px;
     }
     h1 {
         font-size: 50px;
