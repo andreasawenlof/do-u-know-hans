@@ -14,6 +14,27 @@ body {
     height: 100vh;
 }
 
+#enter-section {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#enter-button {
+    width: 80%;
+    height: 60px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-family: monospace;
+    color: #FFDBEE;
+    border-radius: 10px;
+}
+
+#enter-button:hover {
+    border: 3px solid #3A001E;
+}
+
 #name-area {
     display: flex;
     flex-direction: column;
@@ -171,13 +192,14 @@ body {
 .type-one-button:hover {
     background-color: #A14276;
     color: #3A001E;
+    border: 3px solid #3A001E;
 }
 
 .type-one-button {
     background-color: #3A001E;
     color: #FFDBEE;
     border: 3px solid #A14276;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .type-two-button:hover {
