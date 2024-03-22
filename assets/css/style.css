@@ -29,7 +29,8 @@ h2 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 1.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFDBEE;
     text-align: center;
@@ -37,12 +38,13 @@ p {
 }
 
 #logo-instructions {
-    background-color: #3A001E;
+    margin-top: 40px;
 }
 
 #enter-main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     height: 100%;
 }
@@ -52,6 +54,7 @@ p {
 #enter-section {
     display: flex;
     justify-content: center;
+    width: 100%;
     align-items: flex-end;
 }
 
@@ -63,10 +66,6 @@ p {
     font-family: monospace;
     color: #FFDBEE;
     border-radius: 10px;
-}
-
-#enter-button:hover {
-    border: 3px solid #3A001E;
 }
 
 #name-area {
@@ -111,7 +110,7 @@ p {
 }
 
 #name::placeholder {
-    color:#3A001E;
+    color: #3A001E;
     font-size: 20px;
     opacity: 0.7;
 }
@@ -175,20 +174,20 @@ p {
     align-items: center;
 }
 
-#score-field {
-    width: 80%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #3A001E;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 3px solid #A14276;
-    background-color: #3A001EBB;
-    color: #FFDBEE;
-    padding: 15px 10px;
-    border-radius: 15px;
+.text-field {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #3A001E;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border: 3px solid #A14276;
+        background-color: #3A001EBB;
+        color: #FFDBEE;
+        padding: 15px 10px;
+        border-radius: 15px;
 }
 
 
@@ -228,12 +227,6 @@ p {
     border-radius: 10px;
 }
 
-.type-one-button:hover:not(:disabled) {
-    background-color: #A14276;
-    color: #3A001E;
-    border: 3px solid #3A001E;
-}
-
 .type-one-button {
     background-color: #3A001E;
     color: #FFDBEE;
@@ -241,22 +234,36 @@ p {
     border-radius: 10px;
 }
 
-.type-two-button:hover:not(:disabled) {
-    background-color: #3A001E;
-    color: #FFDBEE;
-    border-color: #A14276;
-    
-}
-
 /* Media Queries */
+
+@media (pointer: fine) {
+    .type-one-button:hover:not(:disabled) {
+        background-color: #A14276;
+        color: #3A001E;
+        border: 3px solid #3A001E;
+    }
+
+    .type-two-button:hover:not(:disabled) {
+        background-color: #3A001E;
+        color: #FFDBEE;
+        border-color: #A14276;
+    }
+
+    #enter-button:hover {
+        border: 3px solid #3A001E;
+    }
+
+}
 
 @media only screen and (min-width: 320px) {
     body {
         background-size: cover;
     }
+
     #choices {
         margin-bottom: 70px;
     }
+
     #choices button {
         margin-top: 15px;
         max-width: 400px;
@@ -267,23 +274,27 @@ p {
     body {
         background-size: cover;
     }
-    }
-    #choices button {
-        max-width: 400px;
-        margin-top: 5px;
-    }
+}
+
+#choices button {
+    max-width: 400px;
+    margin-top: 5px;
+}
 
 @media only screen and (min-width: 768px) {
     body {
         background-size: cover;
     }
+
     #choices button {
         max-width: 400px;
         margin-top: 15px;
     }
+
     #enter-button {
         max-width: 400px;
     }
+
     #name {
         max-width: 300px;
     }
@@ -291,6 +302,7 @@ p {
     #submit-button {
         max-width: 250px;
     }
+
     #name::placeholder {
         font-size: 25px;
     }
@@ -306,9 +318,14 @@ p {
     body {
         background-size: cover;
     }
+
     #choices button {
         max-width: 400px;
         margin-top: 5px;
+    }
+
+    button {
+        cursor: pointer;
     }
 }
 
@@ -316,10 +333,12 @@ p {
     body {
         background-size: cover;
     }
+
     #choices button {
         max-width: 400px;
         margin-top: 5px;
     }
+
     #name {
         max-width: 400px;
     }
