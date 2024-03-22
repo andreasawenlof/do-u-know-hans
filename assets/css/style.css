@@ -85,6 +85,9 @@ body {
 #submit-button {
     width: 65%;
     height: 60px;
+    font-size: 24px;
+    font-family: monospace;
+    font-weight: 700;
 }
 
 #quiz-section {
