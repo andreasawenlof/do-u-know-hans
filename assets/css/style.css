@@ -14,12 +14,24 @@ body {
     height: 100vh;
 }
 
+#name-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
 #name-field {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    height: 100px;
+}
+
+#submit-button {
+    width: 75%;
     height: 100px;
 }
 
