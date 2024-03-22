@@ -25,10 +25,10 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFDBEE;
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 h3 {
