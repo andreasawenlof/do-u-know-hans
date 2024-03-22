@@ -1,4 +1,4 @@
-# Do you know Hans?
+# Do u know Hans?
 
 
 
@@ -12,7 +12,7 @@ You can reach the page link [here](https://andreasawenlof.github.io/do-u-know-ha
 
 ## CONTENTS
 
-- [Do you know Hans?](#do-you-know-hans)
+- [Do u know Hans?](#do-u-know-hans)
   - [You can reach the page link here](#you-can-reach-the-page-link-here)
   - [CONTENTS](#contents)
   - [User Experience (UX)](#user-experience-ux)
@@ -31,15 +31,16 @@ You can reach the page link [here](https://andreasawenlof.github.io/do-u-know-ha
   - [Features](#features)
     - [General features on each page](#general-features-on-each-page)
     - [Favicon](#favicon)
-    - [Header / Nav](#header--nav)
+    - [](#)
       - [Mobile](#mobile)
       - [Desktop](#desktop)
     - [Footer](#footer)
       - [Mobile](#mobile-1)
       - [Desktop](#desktop-1)
-    - [The Homepage](#the-homepage)
-    - [Media Section](#media-section)
-    - [Contact Section](#contact-section)
+    - [The Enter Page](#the-enter-page)
+    - [Name Input Section](#name-input-section)
+    - [Quiz Section](#quiz-section)
+    - [Score Section](#score-section)
     - [404 Error Page](#404-error-page)
     - [Future Implementations](#future-implementations)
     - [Accessibility](#accessibility)
@@ -110,29 +111,32 @@ Because i use the same background image on every page i wanted to find a color s
 
 
 ### Typography
-I only imported one font from google fonts that i use for the logo and h2 describing sections of the site.
+Fonts
 
 #### Protest Revolution
-Reason behind this font is it felt a bit rebel(ish) and a bit outside the box reflecting the artist and their personality and art.
-
-It is accessible through google fonts, but i don't think it's that common.
-
-![Protest Revolution](docs/images/protest-revolution.png)
-
-Otherwise the fonts i've used are standard:
+The font's i've used are standard:
 Verdana
+Monospace
+Impact
 
 
 ### Imagery
 
-Using one background image for all content:
-![background image](assets/images/jelica-close-cover-bw-dark.jpg)
+I've used one background image as a foundation for everything:
+![background image](assets/images/zimmerBack.webp)
 
 ### Wireframes
-Wireframes were not used for this particular project
+This time I've used balsamic for an overall, feel, color schemes and just the theme and overall design of the page.
+
+This is the tree structure of my idea
+![Balsamic Wireframe Tree Structure](assets/docs/wireframe-tree-structure.png)
+
+This is the first prototype on how i wanted the design of the quiz. 
+![Balsamic Wireframe Quiz Design](assets/docs/wireframe-quiz.png)
+
 
 ## Features
-The page consist a home-page, media section, contact section and 404 Error page.
+The page consist of an index page, name page, quiz page, score page and 404 page.
 
 The whole site is responsive and works well for all kind of different devices.
 
@@ -143,17 +147,16 @@ The whole site is responsive and works well for all kind of different devices.
 
 Favicon exists on every page.
 
-### Header / Nav
+###
 
-This header exist on every page.
+Background exists on every page
 
 #### Mobile
-![Header for Mobile Devices](docs/images/header-mobile.png)
+![Background for Mobile Devices](docs/images/header-mobile.png)
 
-- Header for mobile is a bit different. - 
+- Background is not as showing to the sides.
 - Logo on top centered to easily see the artist name.
 - The navigation links is inside the header and contrast with a darker background and lighter text color to make it clear and visible.
-- The header is fixed and doesn't follow the flow of the rest of the page.
 
 #### Desktop
 ![Header for Desktop Devices](docs/images/header-desktop.png)
@@ -185,11 +188,11 @@ The footer exists on every page
 
 Background is fixed, and all the content in front of it moves without the background moving.
 
-### The Homepage
+### The Enter Page
 The homepage consists of an about me section to read about the artist, what she is about and what her music is inspired by. This page is very crucial to attract the visitor as we want them to navigate further on the page.
 ![Desktop Snapshot of The HOME page](docs/snap-home.png)
 
-### Media Section
+### Name Input Section
 - This page consist of header and embedded iframes of media. A Spotify link and several Youtube links. 
 - The section is split up into 2 sections for clarity:
   - Music section
@@ -197,12 +200,15 @@ The homepage consists of an about me section to read about the artist, what she 
 - The padding/background is transparent but the videos and the content is not transparent.
 ![Desktop Snapshot of Media Page](docs/snap-media.png)
 
-### Contact Section
+### Quiz Section
 - The contact section consist of an h2 header and a form for the visitor to contact the artist.
 - The input-fields are required which means a user must input information in all fields for it to be able to submit.
 - A large textarea for the user to input a larger message for the communication to feel a bit more personal and intimate.
 - A big submit button is added below the form to submit the contact form.
 ![Desktop Snapshot of The Contact Page](docs/snap-contact.png)
+
+### Score Section
+
 
 ### 404 Error Page
 - Information when the user inputs a non existing webpage. 
@@ -228,23 +234,22 @@ The homepage consists of an about me section to read about the artist, what she 
 - Passed contrast checker, had one problem it said but it's only them not understanding the media queries.
 
 ### Languages Used
-- HTML and CSS were used to create this website. 
-- VERY little javascript just so the fontawesome icons could be loaded.
+- HTMLS and CSS have been used
+- A lot of Javascript have been used to make the page as interactive as possible and provide the best user experience.
 
 ### Frameworks, Libraries & Programs Used
 - Git - For version control
 - Github - To save and store files for the website
-- Googlefonts - For being able to use the font of the Logo and h2 headers.
-- Fontawesome - For the social-media icons in the footer.
+- Fontawesome - For the "audio play"-icon.
 - Favicons - To find the favicon used.
 
 ## Deployment & Local Development
-The site is deployed using Github Pages - [Jelica Thorn Music](https://andreasawenlof.github.io/pp1-final/)
+The site is deployed using Github Pages - [Do u know Hans?](https://andreasawenlof.github.io/do-u-know-hans/)
 
 ### Deployment
 The instructions to achieve this are below:
 1. Log in (or sign up) to Github.
-2. Find the repository for this project, pp1-final.
+2. Find the repository for this project, "do-u-know-hans"
 3. Click on the Settings link.
 4. Click on the Pages link in the left hand side navigation bar.
 5. In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
@@ -255,13 +260,13 @@ The instructions to achieve this are below:
 #### How to Fork
 ##### To Fork the pp1-final repository:
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, andreasawenlof/pp1-final.
+2. Go to the repository for this project, andreasawenlof/do-u-know-hans
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
 ##### To Clone the pp1-final repository:
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, andreasawenlof/pp1-final.
+2. Go to the repository for this project, andreasawenlof/do-u-know-hans.
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -282,16 +287,10 @@ See attached [TESTING.md](TESTING.md)
 ## Credits
 
 - https://spotify.com
-- https://www.tutorialspoint.com/how-to-add-multiple-font-files-for-the-same-font-using-css
-- https://blog.hubspot.com/website/musician-website-examples
-- [Kera's readme-template](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-readme.md)
+- 
 - [Kera's testing-template](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-testing.md)
 - [Kera's TheQuizArms](https://github.com/kera-cudmore/TheQuizArms/blob/main/README.md)
 - [Kera's TheQuizArms](https://github.com/kera-cudmore/TheQuizArms/blob/main/TESTING.md)
-- [Kera's Bully Book Club](https://github.com/kera-cudmore/Bully-Book-Club/blob/main/README.md)
-- [Reltoom's Ways to Relax - Mind, Body & Soul](https://github.com/reltoom/Project-1-Relax/blob/main/README.md)
-- [Searching to be able to adjust the placeholder](https://www.w3schools.com/howto/howto_css_placeholder.asp)
-- [Love Running CI Sample Project](https://github.com/andreasawenlof/love-running-2)
 
 
 ### Code Used
@@ -304,35 +303,21 @@ See attached [TESTING.md](TESTING.md)
 - All the content is written by me.
 - README.md was inspired by links above but not copied nor plagiarized.
 - TESTING.md was inspired by links above but not copied nor plagiarized.
-- I might've been inspired and impacted by certain credits and sources to write README and TESTING as this is totally new to me, but everything is reworked to fit my own project the best.
+- I might've been inspired and impacted by certain credits and sources to write README and TESTING, but everything is reworked to fit my own project the best.
 
 
 ###  Media
 #### Used Media
 - Media Section
   - Music 
-    - Spotify Music Link - https://open.spotify.com/track/20Jtrb4hJ3dgCegCf77nxB?si=518ae356d11240e8
-  - Videos 
-    - Video 1 - https://youtu.be/uULC0GdkIHw?si=qP7veNjSbxmXEf6t
-    - Video 2 - https://youtu.be/Hb36psFq-DM?si=Cz8frczt-AjOO-V4
-    - Video 3 - https://youtu.be/kQH00gQPYOg?si=6e-5dULDCVwJsQgU
-    - Video 4 - https://youtu.be/2vXI7yokQ2Y?si=6d7zhLGNvSbxJGAV
-    - Video 5 - https://youtu.be/Tb2r2hlHCa8?si=3oRD4hSn_6SNl6hB
+    
   
 ###  Acknowledgments
 - Thanks to the Swedish Community on slack for being absolute Legends.
-  - Jörgen_5P_Lead
-  - Erik Guldbrand_P5
-  - Emma S-A_5P
-  - Jaqi_5P
-  - Niclas_5P_Lead
-  - And many more if i forgot someone.
 
 - Thanks to:
-  - My sister who is the artist and has giving me right to do this and use her material and resource.
-  - Great mentor from CI, that gave me great feedback and pointers so I could fix things very early.
+  - To Hans Zimmer for making amazing music.
   - CI Academy for providing a great learning experience.
-  - Jack Ryan on Amazon Prime for helping me with taking breaks.
 
 ## Final Thoughts and Comments
 - At the start I actually had done quite a bit and realized i hadn't commit anything so i remade the project from scratch to be able to commit at the same time when doing the project and not manufacture them later on.

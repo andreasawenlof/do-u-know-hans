@@ -220,6 +220,8 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
     return answerEventListener;
 }
 
+
+
 function scoreCounter(correctPoints, incorrectPoints) {
     const correctCounterElement = document.getElementById('correct-score');
     const correctCounter = Number(correctCounterElement.innerHTML) + correctPoints;
