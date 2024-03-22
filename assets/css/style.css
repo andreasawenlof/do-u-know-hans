@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -15,20 +18,34 @@ body {
 }
 
 h1 {
-    font-size: 32px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-family: "Finger Paint", sans-serif;
     color: #FFDBEE;
     text-align: center;
 }
 
 h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFDBEE;
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
 p {
+    max-width: 400px;
     font-size: 20px;
     line-height: 1.5em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -37,8 +54,22 @@ p {
     margin: 0 20px;
 }
 
+strong {
+    font-family: "Finger Paint", sans-serif;
+}
+
 #logo-instructions {
     margin-top: 40px;
+}
+
+span {
+    padding: 5px 10px;
+    position: relative;
+    top: -7px;
+}
+
+span i {
+    font-size: 20px;
 }
 
 #enter-main {
@@ -176,7 +207,7 @@ p {
 
 .text-field {
         width: 80%;
-        height: 70%;
+        height: 75%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -218,6 +249,30 @@ p {
     width: 75%;
     height: 80px;
     font-size: 24px;
+}
+
+#error-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+}
+
+#error {
+    margin-top: 300px;
+}
+
+#error h3 {
+    margin-top: 20px;
+}
+
+#get-back {
+    font-size: 30px;
+    width: 300px;
+    height: 60px;
+    margin-bottom: 100px;
 }
 
 .type-two-button {
@@ -305,6 +360,9 @@ p {
 
     #name::placeholder {
         font-size: 25px;
+    }
+    .text-field {
+        height: 70%;
     }
 }
 
