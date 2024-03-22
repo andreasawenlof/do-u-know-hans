@@ -14,9 +14,43 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFDBEE;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFDBEE;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFDBEE;
+    text-align: center;
+    margin: 0 20px;
+}
+
+#logo-instructions {
+    background-color: #3A001E;
+}
+
+#enter-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+
 #enter-section {
     display: flex;
-    height: 100%;
     justify-content: center;
     align-items: flex-end;
 }
