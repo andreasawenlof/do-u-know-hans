@@ -1,12 +1,21 @@
 const nameInput = document.getElementById('name');
-const submit = document.getElementById('submitName');
+const submit = document.getElementById('submit-button');
 
-function submitName() {
+function onSubmitButtonClick() {
     const nameInputSubmit = document.getElementById('name').value;
-    nameInputSubmit.toUpperCase();
-    console.log('nameInput', nameInputSubmit);
     localStorage.setItem('name', nameInputSubmit);
     window.location.href = 'quiz.html';
 }
 
-submit.addEventListener('click', submitName);
+function submitButtonDisable() {
+    const nameField = document.getElementById('name').value;
+    if(nameField !== '') {
+        submit.disabled = false;
+    }
+}
+
+submit.disabled = true;
+
+
+nameInput.addEventListener('keydown', submitButtonDisable);
+submit.addEventListener('click', onSubmitButtonClick);
