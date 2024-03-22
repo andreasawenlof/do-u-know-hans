@@ -181,7 +181,7 @@ function createQuestion() {
     }
 
     choiceElement.innerHTML = choiceButtons;
-
+    
     for (const [choice, answer] of Object.entries(randomQuestion.choices)) {
         console.log(`Key: ${choice}, Value: ${answer}`);
         const choiceButtonElement = document.getElementById(choice);

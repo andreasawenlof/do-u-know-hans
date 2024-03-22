@@ -116,7 +116,7 @@ span i {
 
 #label-name {
     background-color: #3A001E;
-    color: #A14276;
+    color: #FFDBEE;
     font-size: 30px;
     font-family: Verdana;
     font-weight: 700;
@@ -129,8 +129,8 @@ span i {
     width: 70%;
     height: 40px;
     border-radius: 10px;
-    background-color: #A14276;
-    color: #3A001E;
+    background-color: #3A001EBB;
+    color: #FFDBEE;
     font-size: 28px;
     font-family: monospace;
     padding: 5px 10px;
@@ -413,9 +413,6 @@ span i {
     }
     #error {
         margin-top: 200px;
-    }
-    #score-field {
-        height: px;
     }
     h1 {
         font-size: 50px;
