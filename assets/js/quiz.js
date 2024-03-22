@@ -169,15 +169,15 @@ function createQuestion() {
     const randomQuestion = quizStructureCopy[randomIndex];
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
     quizStructureCopy = newArrayWithoutIndex;
-    if(quizStructureCopy > 0) {
+    if (quizStructureCopy > 0) {
         quizStructureCopy;
     }
-    
+
     //Add Choice Buttons
     const choiceElement = document.getElementById('choices');
     let choiceButtons = '';
     for (const [choice, answer] of Object.entries(randomQuestion.choices)) {
-        choiceButtons += `<button id='${choice}'>${answer}</button>`;
+        choiceButtons += `<button id='${choice}' class="type-two-button">${answer}</button>`;
     }
 
     choiceElement.innerHTML = choiceButtons;
@@ -189,7 +189,7 @@ function createQuestion() {
     }
 
 
-    if(quizStructureCopy.length === 0) {
+    if (quizStructureCopy.length === 0) {
         window.location.href = 'score.html';
     }
 
@@ -200,7 +200,7 @@ function createQuestion() {
 
 function removeIndexFromArray(arr, index) {
     const firstHalf = arr.slice(0, index);
-    const secondHalf = arr.slice(index+1);
+    const secondHalf = arr.slice(index + 1);
     const newArrayWithoutIndex = firstHalf.concat(secondHalf);
     return newArrayWithoutIndex;
 }
@@ -208,22 +208,28 @@ function removeIndexFromArray(arr, index) {
 function createAnswerEventListener(correctAnswer, pickedAnswer) {
     const answerEventListener = () => {
         const isCorrect = correctAnswer === pickedAnswer;
-        if(isCorrect) {
-            const correctCounterElement = document.getElementById('correct-score');
-            const correctCounter = Number(correctCounterElement.innerHTML) + 1; 
-            correctCounterElement.innerHTML = correctCounter;   
-            localStorage.setItem('correctScore', correctCounter);
+        if (isCorrect) {
+            scoreCounter(1, 0);
         } else {
-            const incorrectCounterElement = document.getElementById('incorrect-score');
-            const incorrectCounter = Number(incorrectCounterElement.innerHTML) + 1;
-            incorrectCounterElement.innerHTML = incorrectCounter;
-            localStorage.setItem('incorrectScore', incorrectCounter);
+            scoreCounter(0, 1);
         }
         createQuestion();
         const player = document.getElementById('audio-player');
         player.pause();
     }
     return answerEventListener;
+}
+
+function scoreCounter(correctPoints, incorrectPoints) {
+    const correctCounterElement = document.getElementById('correct-score');
+    const correctCounter = Number(correctCounterElement.innerHTML) + correctPoints;
+    correctCounterElement.innerHTML = correctCounter;
+    localStorage.setItem('correctScore', correctCounter);
+
+    const incorrectCounterElement = document.getElementById('incorrect-score');
+    const incorrectCounter = Number(incorrectCounterElement.innerHTML) + incorrectPoints;
+    incorrectCounterElement.innerHTML = incorrectCounter;
+    localStorage.setItem('incorrectScore', incorrectCounter);
 }
 
 function audioPlay() {
