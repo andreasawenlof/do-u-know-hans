@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-family: "Finger Paint", sans-serif;
     color: #FFDBEE;
     text-align: center;
@@ -59,7 +59,7 @@ strong {
 }
 
 #logo-instructions {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 span {
@@ -84,15 +84,16 @@ span i {
 
 #enter-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-    align-items: flex-end;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 #enter-button {
     width: 80%;
     height: 60px;
-    margin-bottom: 40px;
     font-size: 28px;
     font-family: monospace;
     color: #FFDBEE;
@@ -331,6 +332,9 @@ span i {
     body {
         background-size: cover;
     }
+    h1 {
+        font-size: 30px;
+    }
 
     #choices {
         margin-bottom: 70px;
@@ -424,7 +428,7 @@ span i {
         margin-top: 200px;
     }
     #score-field {
-        height: 550px;
+        height: 400px;
     }
     h1 {
         font-size: 50px;
