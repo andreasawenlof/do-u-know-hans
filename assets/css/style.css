@@ -242,7 +242,7 @@ span i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #play-again {
@@ -255,13 +255,14 @@ span i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     padding: 10px;
 }
 
 #error {
     margin-top: 300px;
+    height: 30%
 }
 
 #error h3 {
@@ -272,7 +273,6 @@ span i {
     font-size: 30px;
     width: 300px;
     height: 60px;
-    margin-bottom: 100px;
 }
 
 .type-two-button {
@@ -399,5 +399,8 @@ span i {
 
     #name {
         max-width: 400px;
+    }
+    #error {
+        margin-top: 200px;
     }
 }
