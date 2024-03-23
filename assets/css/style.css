@@ -29,14 +29,14 @@ h1 {
 
 h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     font-size: 24px;
     font-weight: 700;
 }
 
 h3 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     font-size: 24px;
     font-weight: 700;
 }
@@ -65,7 +65,6 @@ strong {
 
 .text-field {
     width: 80%;
-    height: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +74,7 @@ strong {
     border: 3px solid #A14276;
     background-color: #3A001EBB;
     color: #FFDBEE;
-    padding: 15px 10px;
+    padding: 10px;
     border-radius: 15px;
 }
 
@@ -120,11 +119,12 @@ a {
     top: -7px;
 }
 
-#music-button-icon-instructions > i {
-    font-size: 20px;
+#hans-zimmer-name {
+    font-family: "Finger Paint", sans-serif;
+    font-size: 24px;
 }
 
-#luck {
+#good-luck {
     font-size: 20px;
     text-align: center;
     margin-top: 30px;
@@ -267,7 +267,6 @@ a {
 
 #score-title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
     color: #FFDBEE;
     text-align: center;
     margin: 0px 2px;
@@ -282,7 +281,6 @@ a {
 #correctScore,
 #incorrectScore {
     font-family: "Finger Paint", sans-serif;
-    font-size: 30px;
     color: #FFDBEE;
 }
 
@@ -351,14 +349,63 @@ a {
 }
 
 /* Small screens with a width between 320px and 768px */
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 250px) and (max-width: 667px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+    
+    #correctScore span, #incorrectScore span {
+        font-size: 24px;
+    }
+
+    #good-luck {
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (min-height: 600px) {
     body {
         background-size: cover;
     }
+
     h1 {
+        font-size: 40px;
+    }
+
+    
+    h2 {
+        font-size: 32px;
+    }
+    #correctScore, #incorrectScore {
         font-size: 30px;
     }
 
+    #correctScore span, #incorrectScore span {
+        font-size: 30px;
+    }
+    
+    
+    #good-luck {
+        font-size: 1.5rem;
+        margin-top: 50px;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+    
+    .text-field {
+        height: 70%;
+    }
+    
     #choices {
         margin-bottom: 30px;
     }
@@ -372,6 +419,7 @@ a {
     #listen-button {
         height: 120px;
     }
+
 }
 
 /* Medium screens with a width between 768px and 992px */
@@ -379,6 +427,26 @@ a {
     body {
         background-size: cover;
     }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    
+    #good-luck {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+    
     #choices button {
         max-width: 400px;
         margin-top: 10px;
@@ -431,6 +499,25 @@ a {
 @media only screen and (min-width: 1200px) {
     body {
         background-size: cover;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    
+    #good-luck {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    
+    p {
+        font-size: 24px;
     }
 
     #choices button {
