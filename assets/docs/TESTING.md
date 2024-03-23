@@ -116,9 +116,12 @@ Tested the site using the following browsers:
 ## BUGS
 | Bug | Fix |
 | :--- | :--- |
-| Got an error where  | Removed "overflow" from style.css. |
-| Viewing contact form on Firefox, placeholder was too aligned to the left | Increased the padding-left |
-| Background scrolled with the content | Added background-attachment: fixed |
-| Everything was transparent even the videos on media section | Instead of Opacity i added an alpha channel to the color and changed it from HEX to RGBA |
+| Got an error where it tried to pick a question when it was out of questions | Solved that by copying the original array so i could use that array to pick from, when the array is empty, the quiz is done |
+| Hover got stuck when using touch-devices | Added media queries that defined the distinction between coarse point (fingers etc) and finer points (mouse pointers, pens and so on) |
+| Quiz crashed after 3 questions | Missed to set a proper number range on my random method |
+| Submit was possible without any entry in name field | Fixed it by have a :disabled:not:hover on submit-button. Disabled the button on loading and enabled it through an event-listener. |
+| When setting up the disabled submit button if removed information needed to press another key for button to be disabled | As the trigger i used keydown, changed it to keyup and it fixed it |
+| Didn't want all the buttons to light in green and red just the one i pick | Solved it by adding a function with 2 paramenters instead of one and and if else statement where both conditions (my choice && correctAnswer) had to be correct |
+| Hover effect showed when picking a choice on bigger screens needed the to remove mouse pointer to see if one was correct or incorrect | solved it by adding :not(.className) in CSS on the hover-class |
 
 No unsolved bugs except the above mentioned Lighthouse Result.

@@ -131,13 +131,22 @@ a {
     font-weight: 700;
 }
 
-/* Buttons showing correct or incorrect after choice */
+/* Button showing correct or incorrect after choice */
 .correct-button {
-    background-color: rgba(18, 82, 18);
+    border: 5px solid #3A001E;
+    font-size: 24px;
+    width: 75%;
+    height: 60px;
+    background-color: rgba(18, 82, 18, 0.8);
+    
 }
 
-.incorrect-button {
-    background-color: rgba(165, 6, 19);
+.incorrect-choice {
+    border: 5px solid #3A001E;
+    font-size: 24px;
+    width: 75%;
+    height: 60px;
+    background-color: rgba(122, 7, 16, 0.8);
 }
 
 
@@ -334,7 +343,7 @@ a {
 
 /* Non touch screens */
 @media (pointer: fine) {
-    .type-one-button:hover:not(:disabled) {
+    .type-one-button:hover:not(:disabled):not(.incorrect-choice):not(.correct-button) {
         background-color: #A14276;
         color: #3A001E;
         border: 3px solid #3A001E;

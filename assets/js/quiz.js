@@ -260,7 +260,7 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
         } else {
             scoreCounter(0, 1);
         }
-        recolorButtonsAccordingToCorrectAnswer(correctAnswer);
+        recolorButtonsAccordingToCorrectAnswer(pickedAnswer, correctAnswer);
         setTimeout(createQuestion, 2000);
         const player = document.getElementById('audio-player');
         player.pause();
@@ -269,16 +269,16 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
 }
 
 /**
- * Colors the choice buttons in respective colors depending of an answer is correct or incorrect.
+ * Colors the choice button in respective colors depending of an answer is correct or incorrect.
  * @param {string} correctAnswer 
  */ 
-function recolorButtonsAccordingToCorrectAnswer(correctAnswer) {
+function recolorButtonsAccordingToCorrectAnswer(choice, correctAnswer) {
     const buttons = document.getElementById('choices').children;
     for (let button of buttons) {
-        if(correctAnswer === button.id) {
-            button.className = 'correct-button';
-        } else {
-            button.className = 'incorrect-button';
+        if((choice === button.id) && (correctAnswer === button.id)) {
+            button.classList.add("correct-button");
+        } else if((choice === button.id) && (correctAnswer !== button.id)) {
+            button.classList.add("incorrect-choice");
         }
     }
 } 
