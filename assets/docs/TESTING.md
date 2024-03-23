@@ -1,6 +1,6 @@
-Jelica Thorn Music - TESTING
+Do u know HANS? - TESTING
 
-![Do u know HANS? Website shown on different devices](assets/docs/images/amiresponsivefull.png)
+![Do u know HANS? Website shown on different devices](assets/docs/images/test/amiresponsive.png)
 
 You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
 ---
@@ -20,10 +20,10 @@ You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
     - [All tests passed](#all-tests-passed)
   - [Testing User Stories](#testing-user-stories)
     - [Visitors Goals](#visitors-goals)
-    - [Returning Visitors Goals](#returning-visitors-goals)
   - [Full Testing](#full-testing)
 - [FIXED AFTER USER FEEDBACK/EXPERIENCE](#fixed-after-user-feedbackexperience)
 - [BUGS](#bugs)
+- [BUGS (not fixed)](#bugs-not-fixed)
 
 ---
 
@@ -47,16 +47,19 @@ Lighthouse
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
 #### Desktop Results
-![Test Index Desktop](docs/images/test/test-index-desk.png)
-![Test Media Desktop](docs/images/test/test-media-desk.png)
-![Test Contact Desktop](docs/images/test/test-contact-desk.png)
-![Test 404 Error Desktop](docs/images/test/test-404-desk.png)
+![Test Home Desktop]()
+![Test Name Desktop](assets/docs/images/lighthouse-name-desktop.png)
+![Test Quiz Desktop](assets/docs/images/lighthouse-quiz-desktop.png)
+![Test Score Desktop](assets/docs/images/lighthouse-score-desktop.png)
+![Test 404 Error Desktop](assets/docs/images/lighthouse-404-desktop.png)
+![Test 500 Error Desktop](assets/docs/images/lighthouse-500-desktop.png)
 
 #### Mobile Results
-![Test Index Mobile](docs/images/test/test-index-mob.png)
-![Test Media Mobile](docs/images/test/test-media-mob.png)
-![Test Contact Mobile](docs/images/test/test-contact-mob.png)
-![Test 404 Error Mobile](docs/images/test/test-404-mob.png)
+![Test Home Mobile](assets/docs/images/lighthouse-home-mobile.png)
+![Test Name Mobile](assets/docs/images/lighthouse-name-mobile.png)
+![Test Quiz Mobile](assets/docs/images/lighthouse-quiz-mobile.png)
+![Test 404 Error Mobile](assets/docs/images/lighthouse-404-mobile.png)
+![Test 500 Error Mobile](assets/docs/images/lighthouse-500-mobile.png)
 
 #### Testing Results of the Media Section on both mobile and desktop are affected by third party cookies and due to the lack of access to the server the http header cannot be set/changed. Therefor the Results cannot be increased.
 
@@ -83,17 +86,17 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 #### Visitors Goals
 | Goals | How are they achieved? |
 | :--- | :--- |
-| `First Time Visitors` |
 |  |  |  |
 | I want to know how to play the game | By providing instructions even at the home page the instructions cannot be missed |
 | I want to be able to input my name | There is a name field where you can input your name and it gets stored in local storage |
 | I want to see my score | The scores are stored in local storage and incremented depending if you're correct or incorrect and in after the quiz you get to know your score |
 | I want to know if I'm correct or incorrect when going to the next question | Choice button that's correct will light green and incorrect buttons will light red. |
 
-#### Returning Visitors Goals
-
 ### Full Testing
 Full testing was performed on the following devices:
+
+- Desktop: 
+  - PC Windows 11 Internet Explorer
 
 - Laptop:
   - Macbook Air M2 13,6"
@@ -102,11 +105,11 @@ Full testing was performed on the following devices:
 
 Tested the site using the following browsers:
 - Google Chrome (All devices)
-- Safari  (All Devices)
+- Safari (All Devices)
 - Firefox (All devices)
 - Microsoft Edge (Desktop)
 
-- Had friends and family testing the site and reported very few issues (all those issues got fixed as you can see in the bug/fix section below).
+- Had friends and family testing the site and reported very few issues (all the issues got fixed as you can see in the bug/fix section below). There are a few bugs i encountered that i've documented below.
 
 
 ## FIXED AFTER USER FEEDBACK/EXPERIENCE
@@ -124,5 +127,11 @@ Tested the site using the following browsers:
 | Didn't want all the buttons to light in green and red just the one i pick | Solved it by adding a function with 2 paramenters instead of one and and if else statement where both conditions (my choice && correctAnswer) had to be correct |
 | Hover effect showed when picking a choice on bigger screens needed the to remove mouse pointer to see if one was correct or incorrect | solved it by adding :not(.className) in CSS on the hover-class |
 | Music button didn't show when it was pressed | Added an active and focus pseudo in css | 
+
+## BUGS (not fixed)
+  Bug  |
+| :--- |
+| When play button is activated and an answer has been chosen you you can press on the play button again and it will unpause |
+| When picking a choice and the color indicating if user is correct or incorrect, you can press many times on the choice button and questions will be picked in succession. This didn't happen before I added the correct and incorrect color, because I use a timeoutDelay, not sure how to fix it, but it's something I'm aware of and something I'm working on |
 
 No unsolved bugs except the above mentioned Lighthouse Result.

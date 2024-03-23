@@ -190,7 +190,7 @@ function createRandomNumberRange(startNumber, endNumber) {
  * Makes sure that the a question never occurs more than once by removing the question from the list of questions.
  */
 function createQuestion() {
-    const randomIndex = createRandomNumberRange(0, quizStructureCopy.length - 2);
+    const randomIndex = createRandomNumberRange(0, quizStructureCopy.length - 1);
     //const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
     const randomQuestion = quizStructureCopy[randomIndex];
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
@@ -271,18 +271,18 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
 /**
  * Colors the choice button in respective colors depending of an answer is correct or incorrect.
  * @param {string} correctAnswer 
- */ 
+ */
 function recolorButtonsAccordingToCorrectAnswer(choice, correctAnswer) {
     const buttons = document.getElementById('choices').children;
     for (let button of buttons) {
-        if((choice === button.id) && (correctAnswer === button.id)) {
+        if ((choice === button.id) && (correctAnswer === button.id)) {
             button.classList.add("correct-button");
-        } else if((choice === button.id) && (correctAnswer !== button.id)) {
+        } else if ((choice === button.id) && (correctAnswer !== button.id)) {
             button.classList.add("incorrect-choice");
-            
+
         }
     }
-} 
+}
 
 
 /**

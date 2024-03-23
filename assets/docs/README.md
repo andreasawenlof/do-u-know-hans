@@ -294,6 +294,9 @@ See attached [TESTING.md](TESTING.md)
 #### Used Media
 - Used Media
 - I've recorded soundtracks of Hans Zimmer tracks from spotify and then cut them to pieces in Logic Pro X for academic purposes.
+- Movies that I used soundstrack from Spotify:
+  - Interstellar
+  - Inception 
     
   
 ###  Acknowledgments
