@@ -179,6 +179,7 @@ Here you input your name. The name will be stored through the whole game and sho
 
 ### Quiz Section
 Here you play the quiz. You click on the button up top with the music note to hear a clip of a soundtrack and try to guess with the choices below what movie is connected to that soundtrack. When you pick a choice you'll be redirected to the next question randmly and the audio-clip connected to that quiz question will be loaded so you can press the music-button again.
+- The buttons also indicate in green or red regarding if you're correct or incorrect.
 ![Desktop Snapshot Quiz(Game) Page](docs/images/snapquiz.png)
 
 ### Score Section
@@ -195,8 +196,8 @@ Alerts the user that of a an error and a button to redirect them back to the hom
 ![Desktop Snapshot of 500.html](docs/images/snap500.png)
 
 ### Future Implementations
-- A score counter that starts from the top and the further they listen to the music the less score they get. When they listen to the whole music clip, they won't be able to answer anyore and the score will be zero showing the right answer and redirect to the next question. 
-- A summarize where you can see on the score page, what movies you maybe need to watch/rewatch showin what you missed.
+- A score counter that starts from the top and the further they listen to the music the less score they get. When they listen to the whole music clip, they won't be able to answer anymore and the score will be zero showing the right answer and redirect to the next question. 
+- A summarize where you can see on the score page, what movies you maybe need to watch/rewatch showing what you missed.
 
 ### Accessibility
 
