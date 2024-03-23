@@ -1,3 +1,9 @@
+/**
+ * This array has all possible question that are used in the quiz. 
+ * The choices object can extend to more options than three.
+ * 
+ */
+
 const quizStructure = [
     {
         question: 'Interstellar',
@@ -145,8 +151,16 @@ const quizStructure = [
     },
 ]
 
+
+// Copy of the array so that the original array does not get altered.
 let quizStructureCopy = [...quizStructure];
 
+
+/**
+ * Resets the quiz
+ * Initializes new questions.
+ * Reset the score and hides the score.
+ */
 function quizInit() {
     quizStructureCopy = [...quizStructure];
     createQuestion();
@@ -159,10 +173,22 @@ function quizInit() {
     document.getElementById('incorrect-score').style.display = 'none';
 }
 
+
+/**
+ * 
+ * @param {number} startNumber 
+ * @param {number} endNumber 
+ * @returns A random number between the rang of startNumber and endNumber
+ */
+
 function createRandomNumberRange(startNumber, endNumber) {
     return Math.floor(Math.random() * (endNumber - startNumber + 1) + startNumber);
 }
 
+/**
+ * Picks a question from the copied array through an random index.
+ * Makes sure that the a question never occurs more than once by removing the question from the list of questions.
+ */
 function createQuestion() {
     const randomIndex = createRandomNumberRange(0, quizStructureCopy.length - 2);
     //const randomIndex = Math.floor(Math.random(quizStructure) * quizStructure.length);
@@ -173,6 +199,12 @@ function createQuestion() {
         quizStructureCopy;
     }
 
+
+    /*
+     * Adds choice buttons, gives them their unique id and also adds an eventListener on them.
+     * Makes sure that the quiz stops trying to pick questions when they question list is empty.
+     * When the question gets picked an audio-file connected to it is loaded ready to play.
+     */
     //Add Choice Buttons
     const choiceElement = document.getElementById('choices');
     let choiceButtons = '';
@@ -198,6 +230,12 @@ function createQuestion() {
     audioPlayer.src = randomQuestion.audio.url;
 }
 
+/**
+ * 
+ * @param {array} arr 
+ * @param {number} index 
+ * @returns An new array without the index
+ */
 function removeIndexFromArray(arr, index) {
     const firstHalf = arr.slice(0, index);
     const secondHalf = arr.slice(index + 1);
@@ -205,6 +243,14 @@ function removeIndexFromArray(arr, index) {
     return newArrayWithoutIndex;
 }
 
+/**
+ * By comparing the choice to the correct answer it determines if the answer is correct or incorrect
+ * @param {string} correctAnswer 
+ * @param {string} pickedAnswer 
+ * @returns an eventHandler to be triggered by an eventListener
+ * Pausing the audio player when choice button triggers
+ * 
+ */
 function createAnswerEventListener(correctAnswer, pickedAnswer) {
     const answerEventListener = () => {
         const isCorrect = correctAnswer === pickedAnswer;
@@ -222,6 +268,10 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
     return answerEventListener;
 }
 
+/**
+ * Colors the choice buttons in respective colors depending of an answer is correct or incorrect.
+ * @param {string} correctAnswer 
+ */ 
 function recolorButtonsAccordingToCorrectAnswer(correctAnswer) {
     const buttons = document.getElementById('choices').children;
     for (let button of buttons) {
@@ -234,7 +284,11 @@ function recolorButtonsAccordingToCorrectAnswer(correctAnswer) {
 } 
 
 
-
+/**
+ * Take an input of score and changes the html-element to the current score and stores it in local storage
+ * @param {number} correctPoints 
+ * @param {number} incorrectPoints 
+ */
 function scoreCounter(correctPoints, incorrectPoints) {
     const correctCounterElement = document.getElementById('correct-score');
     const correctCounter = Number(correctCounterElement.innerHTML) + correctPoints;
@@ -247,12 +301,19 @@ function scoreCounter(correctPoints, incorrectPoints) {
     localStorage.setItem('incorrectScore', incorrectCounter);
 }
 
+
+/**
+ * Triggers to play audio
+ */
 function audioPlay() {
     const audioPlayer = document.getElementById('audio-player');
 
     audioPlayer.play();
 }
 
+/**
+ * Eventhandler including Initialization and triggering audio play
+ */
 function setupEventListener() {
     document.getElementById('listen-button').addEventListener('click', audioPlay);
     document.getElementById('play-again').addEventListener('click', quizInit);
