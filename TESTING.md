@@ -1,6 +1,6 @@
 Do u know HANS? - TESTING
 
-![Do u know HANS? Website shown on different devices](assets/docs/images/test/amiresponsive.png)
+![Do u know HANS? Website shown on different devices](assets/docs/images/amiresponsive.png)
 
 You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
 ---
@@ -11,6 +11,7 @@ You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
 - [CONTENTS](#contents)
 - [AUTOMATED TESTING](#automated-testing)
   - [ W3C Validator](#w3c-validator)
+  - [Contrast Checker](#contrast-checker)
   - [Lighthouse](#lighthouse)
     - [Desktop Results](#desktop-results)
     - [Mobile Results](#mobile-results)
@@ -37,8 +38,12 @@ You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
 - [quiz.html](assets/docs/images/test/w3c-quiz.png) - passed - audio.src is empty but it's being triggered through javascript.
 - [score.html](assets/docs/images/test/w3c-score.png) - passed
 - [404.html](assets/docs/images/test/w3c-404.png) - passed
-- [style.css] 
+- [style.css](assets/docs/images/test/w3c-css.png) - passed 
 
+
+### Contrast Checker
+Checked with contrast checked to make sure colors have enough contrast and theme is clear enough.
+[!Contrast Checker Result](assets/docs/images/test/contrastcheckerresult.png)
 
 
 ### Lighthouse
@@ -47,19 +52,19 @@ Lighthouse
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
 #### Desktop Results
-![Test Home Desktop]()
-![Test Name Desktop](assets/docs/images/lighthouse-name-desktop.png)
-![Test Quiz Desktop](assets/docs/images/lighthouse-quiz-desktop.png)
-![Test Score Desktop](assets/docs/images/lighthouse-score-desktop.png)
-![Test 404 Error Desktop](assets/docs/images/lighthouse-404-desktop.png)
-![Test 500 Error Desktop](assets/docs/images/lighthouse-500-desktop.png)
+![Test Home Desktop](assets/docs/images/test/lighthouse-home-desktop.png)
+![Test Name Desktop](assets/docs/images/test/lighthouse-name-desktop.png)
+![Test Quiz Desktop](assets/docs/images/test/lighthouse-quiz-desktop.png)
+![Test Score Desktop](assets/docs/images/test/lighthouse-score-desktop.png)
+![Test 404 Error Desktop](assets/docs/images/test/lighthouse-404-desktop.png)
+![Test 500 Error Desktop](assets/docs/images/test/lighthouse-500-desktop.png)
 
 #### Mobile Results
-![Test Home Mobile](assets/docs/images/lighthouse-home-mobile.png)
-![Test Name Mobile](assets/docs/images/lighthouse-name-mobile.png)
-![Test Quiz Mobile](assets/docs/images/lighthouse-quiz-mobile.png)
-![Test 404 Error Mobile](assets/docs/images/lighthouse-404-mobile.png)
-![Test 500 Error Mobile](assets/docs/images/lighthouse-500-mobile.png)
+![Test Home Mobile](assets/docs/images/test/lighthouse-home-mobile.png)
+![Test Name Mobile](assets/docs/images/test/lighthouse-name-mobile.png)
+![Test Quiz Mobile](assets/docs/images/test/lighthouse-quiz-mobile.png)
+![Test 404 Error Mobile](assets/docs/images/test/lighthouse-404-mobile.png)
+![Test 500 Error Mobile](assets/docs/images/test/lighthouse-500-mobile.png)
 
 #### Testing Results of the Media Section on both mobile and desktop are affected by third party cookies and due to the lack of access to the server the http header cannot be set/changed. Therefor the Results cannot be increased.
 
@@ -124,7 +129,7 @@ Tested the site using the following browsers:
 | Quiz crashed after 3 questions | Missed to set a proper number range on my random method |
 | Submit was possible without any entry in name field | Fixed it by have a :disabled:not:hover on submit-button. Disabled the button on loading and enabled it through an event-listener. |
 | When setting up the disabled submit button if removed information needed to press another key for button to be disabled | As the trigger i used keydown, changed it to keyup and it fixed it |
-| Didn't want all the buttons to light in green and red just the one i pick | Solved it by adding a function with 2 paramenters instead of one and and if else statement where both conditions (my choice && correctAnswer) had to be correct |
+| Didn't want all the buttons to light in green and red just the one i pick | Solved it by adding a function with 2 parameters instead of one and and if else statement where both conditions (my choice && correctAnswer) had to be correct |
 | Hover effect showed when picking a choice on bigger screens needed the to remove mouse pointer to see if one was correct or incorrect | solved it by adding :not(.className) in CSS on the hover-class |
 | Music button didn't show when it was pressed | Added an active and focus pseudo in css | 
 
@@ -134,4 +139,4 @@ Tested the site using the following browsers:
 | When play button is activated and an answer has been chosen you you can press on the play button again and it will unpause |
 | When picking a choice and the color indicating if user is correct or incorrect, you can press many times on the choice button and questions will be picked in succession. This didn't happen before I added the correct and incorrect color, because I use a timeoutDelay, not sure how to fix it, but it's something I'm aware of and something I'm working on |
 
-No unsolved bugs except the above mentioned Lighthouse Result.
+In all the the bugs won't make for a poor user experience, but it's definitely something to be aware of.
