@@ -87,7 +87,13 @@ span i {
     height: 100%;
 }
 
+.correct-button {
+    background-color: rgba(18, 82, 18);
+}
 
+.incorrect-button {
+    background-color: rgba(165, 6, 19);
+}
 
 #enter-section {
     display: flex;

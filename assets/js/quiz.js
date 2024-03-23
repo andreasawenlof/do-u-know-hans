@@ -210,15 +210,28 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
         const isCorrect = correctAnswer === pickedAnswer;
         if (isCorrect) {
             scoreCounter(1, 0);
+
         } else {
             scoreCounter(0, 1);
         }
-        createQuestion();
+        recolorButtonsAccordingToCorrectAnswer(correctAnswer);
+        setTimeout(createQuestion, 2000);
         const player = document.getElementById('audio-player');
         player.pause();
     }
     return answerEventListener;
 }
+
+function recolorButtonsAccordingToCorrectAnswer(correctAnswer) {
+    const buttons = document.getElementById('choices').children;
+    for (let button of buttons) {
+        if(correctAnswer === button.id) {
+            button.className = 'correct-button';
+        } else {
+            button.className = 'incorrect-button';
+        }
+    }
+} 
 
 
 
