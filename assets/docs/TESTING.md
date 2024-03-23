@@ -111,7 +111,7 @@ Tested the site using the following browsers:
 
 ## FIXED AFTER USER FEEDBACK/EXPERIENCE
 - Fixed so user know if they're incorrect or correct.
-- Added hover only for finer-point devices meaning if you have a stylus you still get the hover but not if you use for example your fingers to control the touchpad.
+- Added hover only for finer-point devices meaning if you have a stylus you still get the hover but not if you use for example your fingers to control the touch pad.
 
 ## BUGS
 | Bug | Fix |

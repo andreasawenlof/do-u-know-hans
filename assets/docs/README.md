@@ -199,6 +199,7 @@ Alerts the user that of a an error and a button to redirect them back to the hom
 - A score counter that starts from the top and the further they listen to the music the less score they get. When they listen to the whole music clip, they won't be able to answer anymore and the score will be zero showing the right answer and redirect to the next question. 
 - A summarize where you can see on the score page, what movies you maybe need to watch/rewatch showing what you missed.
 - A high score section where user can see their score and better them, need backend implementation for that though.
+- Introducing a hard-mode where you actually only see if you're correct or wrong but won't see the correct answer.
 
 ### Accessibility
 

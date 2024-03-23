@@ -277,6 +277,7 @@ function recolorButtonsAccordingToCorrectAnswer(choice, correctAnswer) {
     for (let button of buttons) {
         if((choice === button.id) && (correctAnswer === button.id)) {
             button.classList.add("correct-button");
+            document.get
         } else if((choice === button.id) && (correctAnswer !== button.id)) {
             button.classList.add("incorrect-choice");
         }
