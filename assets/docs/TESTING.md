@@ -19,7 +19,7 @@ You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
   - [Tested:](#tested)
     - [All tests passed](#all-tests-passed)
   - [Testing User Stories](#testing-user-stories)
-    - [First Time Visitors Goals](#first-time-visitors-goals)
+    - [Visitors Goals](#visitors-goals)
     - [Returning Visitors Goals](#returning-visitors-goals)
   - [Full Testing](#full-testing)
 - [FIXED AFTER USER FEEDBACK/EXPERIENCE](#fixed-after-user-feedbackexperience)
@@ -62,34 +62,35 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 ## MANUAL TESTING
 ### Tested:
-- Header is fixed
-- That all links worked, both in header and footer on all pages
-- That form cannot be submitted unless user has filled in every input field
+- All buttons work
+- Audio plays when you click on music button
+- 
+- Choice works to click on at quiz
+- Choice also make the correct answer button light green background and wrong red.
+- Choice also makes you go to the next question and audio loaded up connected with the question.
+- That all links worked
+- That input field works, and store names in local storage.
+- Submit button is disabled when no information is in the input field, and is enabled when you start typing in the input field
+- That score gets stored in local storage and increments even if hidden under the duration of quiz
+- That score and name are stored and being retrieved and used on score page
+- That 404.html and 500.html works
 - That the site and all pages are responsive on all kinds of sizes of devices and screens
-- That the background is attached when i scroll the other content on top
-- That all media links works and opens in a new tab
+
 #### All tests passed
 
 ### Testing User Stories
 
-#### First Time Visitors Goals
+#### Visitors Goals
 | Goals | How are they achieved? |
 | :--- | :--- |
 | `First Time Visitors` |
 |  |  |  |
-| I want to know what the artist is about and through that know if i'm interested or not | By providing an "about-section" on the homepage instead of another link attract the user right away |
-| I want to be able to listen or watch the artist media either on the site or being able to click external links that can open in a new tab | There is a media section and there are music and videos that you can either play on the site or click to go to an external link opening in a new tab |
-| I want to be able to contact the artist or send them a message | A contact section exists where the user can write a message to the artist |
+| I want to know how to play the game | By providing instructions even at the home page the instructions cannot be missed |
+| I want to be able to input my name | There is a name field where you can input your name and it gets stored in local storage |
+| I want to see my score | The scores are stored in local storage and incremented depending if you're correct or incorrect and in after the quiz you get to know your score |
+| I want to know if I'm correct or incorrect when going to the next question | Choice button that's correct will light green and incorrect buttons will light red. |
 
 #### Returning Visitors Goals
-| Goals | How are they achieved? |
-| :--- | :--- |
-| `Returning Visitors` |
-|  |  |  |
-| I want to see updates of new releases | There is a media section where you can post that |
-| I want to be able to contact her or send a message | There is a contact section where the user can send the artist a message |
-| I want to still be able to relate and recognize myself as last time | At the homepage the user can read about the artist and their vision |
-
 
 ### Full Testing
 Full testing was performed on the following devices:
@@ -109,16 +110,15 @@ Tested the site using the following browsers:
 
 
 ## FIXED AFTER USER FEEDBACK/EXPERIENCE
-- Split up the media section into Music and Video
-- Added a 404.html page
+- Fixed so user know if they're incorrect or correct.
 - Added hover only for finer-point devices meaning if you have a stylus you still get the hover but not if you use for example your fingers to control the touchpad.
 
 ## BUGS
 | Bug | Fix |
 | :--- | :--- |
-| Scroll-bar appeared in the "who-section" on Home | Removed "overflow" from style.css. |
+| Got an error where  | Removed "overflow" from style.css. |
 | Viewing contact form on Firefox, placeholder was too aligned to the left | Increased the padding-left |
 | Background scrolled with the content | Added background-attachment: fixed |
 | Everything was transparent even the videos on media section | Instead of Opacity i added an alpha channel to the color and changed it from HEX to RGBA |
 
-No unsolved bugs except the above mentioned Lighthouse Result that I'm not able to influence due to lack of access to backend.
+No unsolved bugs except the above mentioned Lighthouse Result.
