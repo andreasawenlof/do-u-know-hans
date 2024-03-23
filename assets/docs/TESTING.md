@@ -32,11 +32,11 @@ You can view the page [here](https://andreasawenlof.github.io/do-u-know-hans/)
 
 ###  W3C Validator
 [WC3](https://validator.w3.org/) was used to validate all HTML and CSS.
-- [index.html]() - passed
-- [name.html]() - passed - one stray input i think it's because i use an empty input and it's triggered through Javascript.
-- [quiz.html]() - passed - audio.src is empty but it's being triggered through javascript.
-- [score.html]() - passed
-- [404.html](https://andreasawenlof.github.io/do-u-know-hans/) - passed
+- [index.html](assets/docs/images/test/w3c-index.png) - passed
+- [name.html](assets/docs/images/test/w3c-name.png) - passed - one stray input i think it's because i use an empty input and it's triggered through Javascript.
+- [quiz.html](assets/docs/images/test/w3c-quiz.png) - passed - audio.src is empty but it's being triggered through javascript.
+- [score.html](assets/docs/images/test/w3c-score.png) - passed
+- [404.html](assets/docs/images/test/w3c-404.png) - passed
 - [style.css] 
 
 
