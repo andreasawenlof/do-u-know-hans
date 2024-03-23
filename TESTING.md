@@ -141,4 +141,4 @@ Tested the site using the following browsers:
 | When play button is activated and an answer has been chosen you you can press on the play button again and it will unpause |
 | When picking a choice and the color indicating if user is correct or incorrect, you can press many times on the choice button and questions will be picked in succession. This didn't happen before I added the correct and incorrect color, because I use a timeoutDelay, not sure how to fix it, but it's something I'm aware of and something I'm working on |
 
-In all the the bugs won't make for a poor user experience, but it's definitely something to be aware of.
+ Even if there are bugs left unfixed This won't make for a poor user experience, but it's definitely something to be aware of. They can still use all the functions in the game as intended and everything works great. Having that said, it's not perfect and I'm aware of that.
