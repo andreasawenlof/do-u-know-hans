@@ -132,6 +132,7 @@ Tested the site using the following browsers:
 | Didn't want all the buttons to light in green and red just the one i pick | Solved it by adding a function with 2 parameters instead of one and and if else statement where both conditions (my choice && correctAnswer) had to be correct |
 | Hover effect showed when picking a choice on bigger screens needed the to remove mouse pointer to see if one was correct or incorrect | solved it by adding :not(.className) in CSS on the hover-class |
 | Music button didn't show when it was pressed | Added an active and focus pseudo in css | 
+| A bug where error page did not look well not devices like iphone 4 and 5 | Noticed that there was an id that i just had to adjust in a one of the media-query with top margin |
 
 ## BUGS (not fixed)
   Bug  |
