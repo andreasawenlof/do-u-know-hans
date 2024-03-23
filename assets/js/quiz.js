@@ -261,7 +261,7 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
             scoreCounter(0, 1);
         }
         recolorButtonsAccordingToCorrectAnswer(pickedAnswer, correctAnswer);
-        setTimeout(createQuestion, 2000);
+        setTimeout(createQuestion, 1000);
         const player = document.getElementById('audio-player');
         player.pause();
     }
