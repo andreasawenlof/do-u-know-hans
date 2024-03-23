@@ -61,6 +61,45 @@ strong {
     font-family: "Finger Paint", sans-serif;
 }
 
+/* || General Classes ||*/
+
+.text-field {
+    width: 80%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #3A001E;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid #A14276;
+    background-color: #3A001EBB;
+    color: #FFDBEE;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+/* Button general style type 1 */
+.type-one-button {
+    background-color: #3A001E;
+    color: #FFDBEE;
+    border: 3px solid #A14276;
+    border-radius: 10px;
+}
+/* Button general style type 2 */
+.type-two-button {
+    background-color: #A14276;
+    color: #FFDBEE;
+    border: 3px solid #3A001E;
+    border-radius: 10px;
+}
+
+/* Link buttons */
+a {
+    display: inline-block;
+    width: 75%;
+}
+
 /* Container of Logo, instructions and play-button */
 #enter-main {
     display: flex;
@@ -92,7 +131,7 @@ strong {
     font-weight: 700;
 }
 
-
+/* Buttons showing correct or incorrect after choice */
 .correct-button {
     background-color: rgba(18, 82, 18);
 }
@@ -100,6 +139,7 @@ strong {
 .incorrect-button {
     background-color: rgba(165, 6, 19);
 }
+
 
 #enter-section {
     display: flex;
@@ -109,6 +149,7 @@ strong {
     align-items: center;
     margin-bottom: 30px;
 }
+
 
 #enter-button {
     width: 100%;
@@ -223,22 +264,6 @@ strong {
     align-items: center;
 }
 
-.text-field {
-        width: 80%;
-        height: 75%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: #3A001E;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: 3px solid #A14276;
-        background-color: #3A001EBB;
-        color: #FFDBEE;
-        padding: 15px 10px;
-        border-radius: 15px;
-}
-
 
 #score-title {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -254,8 +279,6 @@ strong {
     flex-direction: column;
 }
 
-
-
 #correctScore,
 #incorrectScore {
     font-family: "Finger Paint", sans-serif;
@@ -267,7 +290,6 @@ strong {
     font-size: 40px;
 }
 
-
 #correctScore {
     margin-bottom: 0px;
 }
@@ -278,11 +300,6 @@ strong {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-}
-
-a {
-    display: inline-block;
-    width: 75%;
 }
 
 #play-again {
@@ -313,21 +330,6 @@ a {
     font-size: 30px;
     width: 300px;
     height: 60px;
-}
-
-/* Button general style type 1 */
-.type-one-button {
-    background-color: #3A001E;
-    color: #FFDBEE;
-    border: 3px solid #A14276;
-    border-radius: 10px;
-}
-/* Button general style type 2 */
-.type-two-button {
-    background-color: #A14276;
-    color: #FFDBEE;
-    border: 3px solid #3A001E;
-    border-radius: 10px;
 }
 
 /* Media Queries */
