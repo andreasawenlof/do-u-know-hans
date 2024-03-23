@@ -172,7 +172,7 @@ Consist of a title of the Quiz and a clear instruction on how to play the game. 
 ![Desktop Snapshot of The HOME page](assets/docs/images/snaphome.png)
 
 ### Name Input Section
-Here you input your name. The name will be stored through the whole game and show in the end with the summarize of the score.
+Here you input your name. The name will be stored through the whole game and show in the end with the summarize of the score. Submit button is also disabled when there is not input in the input field but as soon as there in information the submit button is being enabled.
 
 ![Desktop Snapshot of the Name Input Page](docs/images/snapname.png)
 
@@ -197,7 +197,8 @@ Alerts the user that the page cannot be found and a button to redirect them back
 
 - Semantic HTML have been used for better anc clearer accessibility for screen readers. 
 - Hover state on links to easier see where the mouse pointer is over.
-- Hover state is also disabled for touch devices to not make hove-effects get stuck and show incosistencies.
+- Hover state is also disabled for touch devices to not make hover-effects get stuck and show incosistencies.
+- With the hover removal for touching devices I've used coarse vs fine-pointer in CSS meaning that if you have a stylus you actaully have the hover as well. Make it a bit more distinct.
 - Colors with enough contrast to see clearly different elements.
 - Used Sans-Serif fonts for better accessibility to people with dyslexia.
 
@@ -205,14 +206,17 @@ Alerts the user that the page cannot be found and a button to redirect them back
 - Passed contrast checker, had one problem it said but it's only them not understanding the media queries.
 
 ### Languages Used
-- HTMLS and CSS have been used
-- A lot of Javascript have been used to make the page as interactive as possible and provide the best user experience.
+- HTML, CSS and Javascript has been used.
+- A lot of Javascript have been used to make the page as interactive as possible and provide the best possible user experience.
 
 ### Frameworks, Libraries & Programs Used
 - Git - For version control
 - Github - To save and store files for the website
 - Fontawesome - For the "audio play"-icon.
 - Favicons - To find the favicon used.
+- Spotify - To record audio tracks from.
+- Rogue Amoeba Loopback - To reroute Spotify audio to be able to record properly
+- Logic Pro X - To cut all the audio clips and process them with fade ins/outs for a smoother experience
 
 ## Deployment & Local Development
 The site is deployed using Github Pages - [Do u know Hans?](https://andreasawenlof.github.io/do-u-know-hans/)
@@ -257,18 +261,19 @@ See attached [TESTING.md](TESTING.md)
 
 ## Credits
 
-- https://spotify.com
-- 
 - [Kera's testing-template](https://github.com/kera-cudmore/readme-examples/blob/main/milestone1-testing.md)
 - [Kera's TheQuizArms](https://github.com/kera-cudmore/TheQuizArms/blob/main/README.md)
 - [Kera's TheQuizArms](https://github.com/kera-cudmore/TheQuizArms/blob/main/TESTING.md)
+- https://www.freecodecamp.org/news/how-to-remove-an-element-from-a-javascript-array-removing-a-specific-item-in-js
+- https://flexiple.com/javascript/loop-through-object-javascrip
+- https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
 
 
 ### Code Used
 
-- I've gotten inspired from the love-running project but wrote all the code myself.
+- I've written all code myself.
 - I might've been inspired but all the code and ideas where my own and I've coded all myself.
-- When I google'd or searched for something i never copied but wrote it properly myself to fit my own project.
+- When I google'd or searched for something i never copied but wrote it properly myself to fit my own project and all the few sites I've used are in the credits section.
 
 ### Content
 - All the content is written by me.
@@ -279,8 +284,8 @@ See attached [TESTING.md](TESTING.md)
 
 ###  Media
 #### Used Media
-- Media Section
-  - Music 
+- Used Media
+- I've recorded soundtracks of Hans Zimmer tracks from spotify and then cut them to pieces in Logic Pro X for academic purposes.
     
   
 ###  Acknowledgments
@@ -288,9 +293,16 @@ See attached [TESTING.md](TESTING.md)
 
 - Thanks to:
   - To Hans Zimmer for making amazing music.
+  - Thanks for Christopher Nolan and Denis Villeneuve for making amazing masterpieces for Hans Zimmer to score to.
   - CI Academy for providing a great learning experience.
 
 ## Final Thoughts and Comments
-- At the start I actually had done quite a bit and realized i hadn't commit anything so i remade the project from scratch to be able to commit at the same time when doing the project and not manufacture them later on.
+- I made almost everything javascript first and realized when i was pretty much done with the core hard work that I missed to commit. So to become a learning experienve nad instead o editing etc after I remade Javascript from scratch to make it a learning experience as well as i could commit properly.
 
-- I probably ended up rebuilding the project 10-20 times not being happy. Started with different designs, single page, multi page, single page again. Colors and no gray scale etc. The journey has been quite long but it has been very teachable and fun in the end.
+- Kind of had an idea from the beginning. I wante to do something different, and came up with what about you listen to audio instead? 
+Balsamiq helped me realize this idea so i could see it. After it was pretty much about to make what was in balsamiq look like that in coding. I had a lot of fun and there is so much more i want to implement cause I never would wanna settle with average just to pass. I want to do the best I can. After all this will be my portfolio to be able to apply for future jobs.
+  
+- I recorded 3-4 whole tracks from Hans Zimmer of the 11 different movies. 
+- I then imported it to Logic Pro X and choose the best bits to cut them to 1 minute clips. 
+- To not give the user a shock when they start I also faded in and out the clips to make them start and finish smoothly.
+- I know this has nothing to do with coding, but this was the preparation for the project and I never was a firm believe of average.
