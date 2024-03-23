@@ -1,11 +1,14 @@
+
+/* Import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 
-
+/* Reset margin and padding universally */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* || General Styles || */
 body {
     width: 100%;
     background-image: url('../images/zimmerBack.webp');
@@ -58,17 +61,27 @@ strong {
     font-family: "Finger Paint", sans-serif;
 }
 
+/* Container of Logo, instructions and play-button */
+#enter-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
 #logo-instructions {
     margin-top: 20px;
 }
 
-span {
+/* Small music icon in instructions */
+#music-button-icon-instructions {
     padding: 5px 10px;
     position: relative;
     top: -7px;
 }
 
-span i {
+#music-button-icon-instructions > i {
     font-size: 20px;
 }
 
@@ -79,13 +92,6 @@ span i {
     font-weight: 700;
 }
 
-#enter-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
 
 .correct-button {
     background-color: rgba(18, 82, 18);
@@ -309,6 +315,14 @@ a {
     height: 60px;
 }
 
+/* Button general style type 1 */
+.type-one-button {
+    background-color: #3A001E;
+    color: #FFDBEE;
+    border: 3px solid #A14276;
+    border-radius: 10px;
+}
+/* Button general style type 2 */
 .type-two-button {
     background-color: #A14276;
     color: #FFDBEE;
@@ -316,15 +330,9 @@ a {
     border-radius: 10px;
 }
 
-.type-one-button {
-    background-color: #3A001E;
-    color: #FFDBEE;
-    border: 3px solid #A14276;
-    border-radius: 10px;
-}
-
 /* Media Queries */
 
+/* Non touch screens */
 @media (pointer: fine) {
     .type-one-button:hover:not(:disabled) {
         background-color: #A14276;
@@ -340,6 +348,7 @@ a {
 
 }
 
+/* Small screens with a width between 320px and 768px */
 @media only screen and (min-width: 320px) {
     body {
         background-size: cover;
@@ -363,6 +372,7 @@ a {
     }
 }
 
+/* Medium screens with a width between 768px and 992px */
 @media only screen and (min-width: 768px) {
     body {
         background-size: cover;
@@ -392,13 +402,14 @@ a {
         max-width: 400px;
     }
 }
-
+/* Medium screens with a width between 768px and 992px in portrait */
 @media only screen and (min-width: 768px) and (height: 1024px) {
     body {
         background-size: cover;
     }
 }
 
+/* Larger screen with a width between 992px and 1200px */
 @media only screen and (min-width: 992px) {
     body {
         background-size: cover;
@@ -414,6 +425,7 @@ a {
     }
 }
 
+/* Desktop screens with a width of 1200px and above */
 @media only screen and (min-width: 1200px) {
     body {
         background-size: cover;
