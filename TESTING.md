@@ -63,6 +63,7 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 ![Test Home Mobile](assets/docs/images/test/lighthouse-home-mobile.png)
 ![Test Name Mobile](assets/docs/images/test/lighthouse-name-mobile.png)
 ![Test Quiz Mobile](assets/docs/images/test/lighthouse-quiz-mobile.png)
+![Test Score Mobile](assets/docs/images/test/lighthouse-score-mobile.png)
 ![Test 404 Error Mobile](assets/docs/images/test/lighthouse-404-mobile.png)
 ![Test 500 Error Mobile](assets/docs/images/test/lighthouse-500-mobile.png)
 
