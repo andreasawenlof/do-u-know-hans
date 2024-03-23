@@ -40,6 +40,7 @@ You can reach the page link [here](https://andreasawenlof.github.io/do-u-know-ha
     - [Quiz Section](#quiz-section)
     - [Score Section](#score-section)
     - [404 Error Page](#404-error-page)
+    - [500 Error Page](#500-error-page)
     - [Future Implementations](#future-implementations)
     - [Accessibility](#accessibility)
     - [Languages Used](#languages-used)
@@ -138,7 +139,7 @@ This is the first prototype on how i wanted the design of the quiz.
 
 
 ## Features
-The page consist of an Home Page, Name Page, Game Page, Score Page and 404 page.
+The page consist of an Home Page, Name Page, Game Page, Score Page, 404 and 500 page.
 
 The whole site is responsive and works well for all kind of different devices.
 
@@ -182,12 +183,16 @@ Here you play the quiz. You click on the button up top with the music note to he
 
 ### Score Section
 This is the page you land after you've played the quiz. Here you will be congratulated for a job well done. The name an score has been saved into local storage so we can congratulate the user personally with their name and also that they can see how many questions they got correct/incorrect. 
-- Play Again button to be redirected to the start of a new quiz with the score reseted but still having the same name.
+- Play Again button to be redirected to the start of a new quiz with the score reset but still having the same name.
 ![Desktop Snapshot of the Score Page](docs/images/snapscore.png)
 
 ### 404 Error Page
 Alerts the user that the page cannot be found and a button to redirect them back to the home page.
 ![Desktop Snapshot of 404.html](docs/images/snap404.png)
+
+### 500 Error Page
+Alerts the user that of a an error and a button to redirect them back to the home page.
+![Desktop Snapshot of 500.html](docs/images/snap500.png)
 
 ### Future Implementations
 - A score counter that starts from the top and the further they listen to the music the less score they get. When they listen to the whole music clip, they won't be able to answer anyore and the score will be zero showing the right answer and redirect to the next question. 
@@ -297,9 +302,9 @@ See attached [TESTING.md](TESTING.md)
   - CI Academy for providing a great learning experience.
 
 ## Final Thoughts and Comments
-- I made almost everything javascript first and realized when i was pretty much done with the core hard work that I missed to commit. So to become a learning experienve nad instead o editing etc after I remade Javascript from scratch to make it a learning experience as well as i could commit properly.
+- I made almost everything javascript first and realized when i was pretty much done with the core hard work that I missed to commit. So to become a learning experience nad instead o editing etc after I remade Javascript from scratch to make it a learning experience as well as i could commit properly.
 
-- Kind of had an idea from the beginning. I wante to do something different, and came up with what about you listen to audio instead? 
+- Kind of had an idea from the beginning. I wanted to do something different, and came up with what about you listen to audio instead? 
 Balsamiq helped me realize this idea so i could see it. After it was pretty much about to make what was in balsamiq look like that in coding. I had a lot of fun and there is so much more i want to implement cause I never would wanna settle with average just to pass. I want to do the best I can. After all this will be my portfolio to be able to apply for future jobs.
   
 - I recorded 3-4 whole tracks from Hans Zimmer of the 11 different movies. 
