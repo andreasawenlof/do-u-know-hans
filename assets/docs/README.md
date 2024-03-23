@@ -1,11 +1,9 @@
 # Do u know Hans?
 
-
-
-This site is a quiz website where you listen instead of reading. The purpose is to have fun and hopefully at the same time learn something. It's a quite niched quizz about one of the better film composers of our time: Hans Zimmer.
+This site is a quiz website where you listen instead of reading. The purpose is to have fun and hopefully at the same time learn something. It's a quite niched quiz about one of the better film composers of our time: Hans Zimmer.
 This website is responsive and allowed to view on all devices.
 
-![Do u know HANS? shown on different devices](assets/docs/images/amiresponsivefull.png)
+![Do u know HANS? shown on different devices](assets/docs/images/amiresponsive.png)
 
 You can reach the page link [here](https://andreasawenlof.github.io/do-u-know-hans/)
 ---
@@ -19,8 +17,7 @@ You can reach the page link [here](https://andreasawenlof.github.io/do-u-know-ha
     - [Key information for the site](#key-information-for-the-site)
     - [User Stories](#user-stories)
       - [Client Goals](#client-goals)
-      - [First Time Visitor Goals](#first-time-visitor-goals)
-      - [Returning Visitors Goals](#returning-visitors-goals)
+      - [Visitor Goals](#visitor-goals)
   - [Design](#design)
     - [Color Scheme](#color-scheme)
     - [Thoughts behind choosing this color scheme:](#thoughts-behind-choosing-this-color-scheme)
@@ -67,7 +64,7 @@ You can reach the page link [here](https://andreasawenlof.github.io/do-u-know-ha
 
 ## User Experience (UX)
 
-Do you know Hanz? Is an audio quiz about the composer Hans Zimmer. Where you can listen to different music clip while trying to guess and pair them up with the correct movie the audios is from. Eh you're supposed to hanve and maybe also learn something. You start by entering the main site where you can read the rules see the title of the quiz and enter the quiz. You get linked into page where you type your name and can start the quiz. Score points will be stored and will be revealed when you've done the quiz, your name is also stored and you get a personal message in the end where you also can play again to better your score.
+Do you know Hans? Is an audio quiz about the composer Hans Zimmer. Where you can listen to different music clip while trying to guess and pair them up with the correct movie the audios is from. Eh you're supposed to have and maybe also learn something. You start by entering the main site where you can read the rules see the title of the quiz and enter the quiz. You get linked into page where you type your name and can start the quiz. Score points will be stored and will be revealed when you've done the quiz, your name is also stored and you get a personal message in the end where you also can play again to better your score.
 
 ### Key information for the site
  - Read the rules
@@ -80,23 +77,15 @@ Do you know Hanz? Is an audio quiz about the composer Hans Zimmer. Where you can
 #### Client Goals
 
 - To view the site on a range of different devices
-- To understand what the artist is about
-- To be able to listen to music
-- To relate and become a follower of her journey
-- To have clear links and no confusion where to go
+- To understand the rules of the quiz
+- To be able to listen to some amazing soundtracks
+- To maybe become more interested in the soundtracks and knowing more about them and maybe listening to the in their entirety.
+- To have a clear and clean interface where the choices are clear.
 
-#### First Time Visitor Goals
-
-
-
+#### Visitor Goals
 - I want to know what the artist is about and through that know if i'm interested or not
 - I want to be able to listen or watch the artist media either on the site or being able to click external links that can open in a new tab
 - I want to be able to contact the artist or send them a message
-
-#### Returning Visitors Goals
-- I want to see updates of new releases
-- I want to be able to contact her or send a message
-- I want to still be able to relate and recognize myself as last time
 
 ## Design
 
@@ -105,7 +94,7 @@ Do you know Hanz? Is an audio quiz about the composer Hans Zimmer. Where you can
 
 ![Color Scheme](<assets/docs/doyouknowhans.png>)
 ### Thoughts behind choosing this color scheme:
-Because i use the same background image on every page i wanted to find a color scheme that was through a color color picked from the background. I used adobe color wheel for this and found a good color shceme. I felt that it was enough variation with 3 colors, creating a constant theme, the background has quite a lot so felt like more colors would be too much and maybe create too much separation through the entire theme of the project.
+Because i use the same background image on every page i wanted to find a color scheme that was through a color color picked from the background. I used adobe color wheel for this and found a good color scheme. I felt that it was enough variation with 3 colors, creating a constant theme, the background has quite a lot so felt like more colors would be too much and maybe create too much separation through the entire theme of the project.
 
 
 
@@ -178,8 +167,10 @@ Here you input your name. The name will be stored through the whole game and sho
 ![Desktop Snapshot of the Name Input Page](docs/images/snapname.png)
 
 ### Quiz Section
-Here you play the quiz. You click on the button up top with the music note to hear a clip of a soundtrack and try to guess with the choices below what movie is connected to that soundtrack. When you pick a choice you'll be redirected to the next question randmly and the audio-clip connected to that quiz question will be loaded so you can press the music-button again.
-- The buttons also indicate in green or red regarding if you're correct or incorrect.
+Here you play the quiz. You click on the button up top with the music note to hear a clip of a soundtrack and try to guess through the choices below what movie is connected to the soundtrack one is listening to. When you pick a choice you'll be redirected to the next question randomly and the audio-clip connected to that quiz question will be loaded so you can press the music-button again to hear the new soundtrack-clip.
+- The choice buttons also indicate in green or red regarding if you're correct or incorrect. 
+- The choice buttons have an hover effect to know what choice you're about to pick.
+- The music button also has a active and focus mode showing that the user has pressed the button and music is playing.
 ![Desktop Snapshot Quiz(Game) Page](docs/images/snapquiz.png)
 
 ### Score Section
@@ -197,7 +188,7 @@ Alerts the user that of a an error and a button to redirect them back to the hom
 
 ### Future Implementations
 - A score counter that starts from the top and the further they listen to the music the less score they get. When they listen to the whole music clip, they won't be able to answer anymore and the score will be zero showing the right answer and redirect to the next question. 
-- A summarize where you can see on the score page, what movies you maybe need to watch/rewatch showing what you missed.
+- A summary where you can see on the score page, what movies you maybe need to watch/rewatch showing what you missed.
 - A high score section where user can see their score and better them, need backend implementation for that though.
 - Introducing a hard-mode where you actually only see if you're correct or wrong but won't see the correct answer.
 
@@ -205,13 +196,14 @@ Alerts the user that of a an error and a button to redirect them back to the hom
 
 - Semantic HTML have been used for better anc clearer accessibility for screen readers. 
 - Hover state on links to easier see where the mouse pointer is over.
-- Hover state is also disabled for touch devices to not make hover-effects get stuck and show incosistencies.
-- With the hover removal for touching devices I've used coarse vs fine-pointer in CSS meaning that if you have a stylus you actaully have the hover as well. Make it a bit more distinct.
+- Hover state is also disabled for touch devices to not make hover-effects get stuck and show inconsistencies.
+- With the hover removal for touching devices I've used coarse vs fine-pointer in CSS meaning that if you have a stylus you actually have the hover as well. Make it a bit more distinct.
 - Colors with enough contrast to see clearly different elements.
 - Used Sans-Serif fonts for better accessibility to people with dyslexia.
+- An active and focus pesudo selector to show that the "music" button in the quiz is pressed down and the music is playing.
 
-- Added aria-labels on all links to help screen-readers better understand and navigate the project.
-- Passed contrast checker, had one problem it said but it's only them not understanding the media queries.
+- Added aria-labels on all links and some headers to help screen-readers better understand and navigate the project.
+- Passed contrast checker.
 
 ### Languages Used
 - HTML, CSS and Javascript has been used.
@@ -280,7 +272,7 @@ See attached [TESTING.md](TESTING.md)
 ### Code Used
 
 - I've written all code myself.
-- I might've been inspired but all the code and ideas where my own and I've coded all myself.
+- Idea was my own and actually haven't looked that much on other projects.
 - When I google'd or searched for something i never copied but wrote it properly myself to fit my own project and all the few sites I've used are in the credits section.
 
 ### Content
@@ -294,9 +286,19 @@ See attached [TESTING.md](TESTING.md)
 #### Used Media
 - Used Media
 - I've recorded soundtracks of Hans Zimmer tracks from spotify and then cut them to pieces in Logic Pro X for academic purposes.
-- Movies that I used soundstrack from Spotify:
+- I recorded of Spotify and these are the movies i use soundtracks from:
   - Interstellar
   - Inception 
+  - Dunkirk
+  - Batman - Dark Knight
+  - The Pirates of the Caribbean (Abbrivated as "Pirates")
+  - Sherlock Holmes (Abbrivated as "Sherlock")
+  - The Lion King (Abbrivated as "Lion King")
+  - Gladiator
+  - Dune
+  - Man of Steel
+  - Rush
+  - The Last Samurai (Abbreviated as "Last Samurai")
     
   
 ###  Acknowledgments
@@ -313,7 +315,7 @@ See attached [TESTING.md](TESTING.md)
 - Kind of had an idea from the beginning. I wanted to do something different, and came up with what about you listen to audio instead? 
 Balsamiq helped me realize this idea so i could see it. After it was pretty much about to make what was in balsamiq look like that in coding. I had a lot of fun and there is so much more i want to implement cause I never would wanna settle with average just to pass. I want to do the best I can. After all this will be my portfolio to be able to apply for future jobs.
   
-- I recorded 3-4 whole tracks from Hans Zimmer of the 11 different movies. 
+- I recorded 3-4 whole tracks from Hans Zimmer from the 12 different movies. 
 - I then imported it to Logic Pro X and choose the best bits to cut them to 1 minute clips. 
 - To not give the user a shock when they start I also faded in and out the clips to make them start and finish smoothly.
-- I know this has nothing to do with coding, but this was the preparation for the project and I never was a firm believe of average.
+- I know this has nothing to do with coding, but this was the preparation for the project and I never was a firm believer of average.
