@@ -264,25 +264,26 @@ a {
     height: 100px;
     font-size: 60px;
     color: #A14276;
+    background-color: #3A001ECC;
 }
 
 
 #listen-button:hover {
-    background-color: #3A001E;
+    background-color: #3A001EBB;
     border: 3px solid #FFDBEEBB;
 }
 
 #listen-button:focus {
     background-color: #A14276;
-    color: #FFDBEEBB;
+    color: #3A001EBB;
     border: 3px solid #3A001E;
-    box-shadow: 2px 2px 2px 2px #FFDBEEBB;
+    box-shadow: -1px 3px 2px 3px #3A001E;
 }
 
 #listen-button:active {
     background-color: #3A001E;
     color: #FFDBEEBB;
-    border: 3px solid #3A001E;
+    border: 1px solid #FFDBEE;
 }
 
 #score-section {
@@ -368,6 +369,7 @@ a {
         color: #3A001E;
         border: 3px solid #3A001E;
     }
+    
 
     .type-two-button:hover:not(:disabled) {
         background-color: #3A001E;
