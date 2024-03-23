@@ -72,6 +72,13 @@ span i {
     font-size: 20px;
 }
 
+#luck {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
 #enter-main {
     display: flex;
     flex-direction: column;
