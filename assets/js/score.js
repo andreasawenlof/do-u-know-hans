@@ -8,8 +8,10 @@ const incorrectScoreTotal = Number(localStorage.getItem('incorrectScore'));
 /**
  * Use score-variable to input score in html
  */
-document.getElementById('correctScore').innerHTML = `<span>${correctScoreTotal}</span> Correct <br>Answers `;
-document.getElementById('incorrectScore').innerHTML = `<span>${incorrectScoreTotal}</span> Incorrect <br>Answers`;
+const correctScore = document.getElementById('correctScore');
+const incorrectScore = document.getElementById('incorrectScore');
+correctScore.innerHTML = `<span>${correctScoreTotal}</span> Correct <br>Answers `;
+incorrectScore.innerHTML = `<span>${incorrectScoreTotal}</span> Incorrect <br>Answers`;
 
 /**
  * Get name from localstorage and stores it in a variable
