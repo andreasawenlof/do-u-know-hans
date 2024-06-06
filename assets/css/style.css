@@ -1,4 +1,3 @@
-
 /* Import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 
@@ -85,6 +84,7 @@ strong {
     border: 3px solid #A14276;
     border-radius: 10px;
 }
+
 /* Button general style type 2 */
 .type-two-button {
     background-color: #A14276;
@@ -138,7 +138,7 @@ a {
     width: 75%;
     height: 60px;
     background-color: rgba(20, 116, 20, 0.6);
-    
+
 }
 
 .incorrect-choice {
@@ -273,18 +273,21 @@ a {
     border: 3px solid #FFDBEEBB;
 }
 
+/* 
 #listen-button:focus {
     background-color: #A14276;
     color: #3A001EBB;
     border: 3px solid #3A001E;
     box-shadow: -1px 3px 2px 3px #3A001E;
-}
+} */
 
 #listen-button:active {
     background-color: #3A001E;
     color: #FFDBEEBB;
     border: 1px solid #FFDBEE;
 }
+
+
 
 #score-section {
     height: 100%;
@@ -296,7 +299,7 @@ a {
 
 
 #score-title {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #FFDBEE;
     text-align: center;
     margin: 0px 2px;
@@ -314,7 +317,8 @@ a {
     color: #FFDBEE;
 }
 
-#incorrectScore span, #correctScore span {
+#incorrectScore span,
+#correctScore span {
     font-size: 40px;
 }
 
@@ -369,11 +373,11 @@ a {
         color: #3A001E;
         border: 3px solid #3A001E;
     }
-    
+
 
     .type-two-button:hover:not(:disabled) {
         background-color: #3A001E;
-        color:#A14276;
+        color: #A14276;
         border-color: #A14276;
     }
 
@@ -388,8 +392,9 @@ a {
     h2 {
         font-size: 18px;
     }
-    
-    #correctScore span, #incorrectScore span {
+
+    #correctScore span,
+    #incorrectScore span {
         font-size: 24px;
     }
 
@@ -400,9 +405,11 @@ a {
     p {
         font-size: 16px;
     }
+
     .text-field {
         height: 60%;
     }
+
     #error {
         margin-top: 50px;
         height: 30%
@@ -417,32 +424,35 @@ a {
     h1 {
         font-size: 36px;
     }
-    
+
     h2 {
         font-size: 32px;
     }
-    #correctScore, #incorrectScore {
+
+    #correctScore,
+    #incorrectScore {
         font-size: 30px;
     }
 
-    #correctScore span, #incorrectScore span {
+    #correctScore span,
+    #incorrectScore span {
         font-size: 30px;
     }
-    
-    
+
+
     #good-luck {
         font-size: 1.5rem;
         margin-top: 50px;
     }
-    
+
     p {
         font-size: 20px;
     }
-    
+
     .text-field {
         height: 70%;
     }
-    
+
     #choices {
         margin-bottom: 30px;
     }
@@ -453,6 +463,7 @@ a {
         height: 70px;
         margin-bottom: 20px;
     }
+
     #listen-button {
         height: 120px;
     }
@@ -469,21 +480,21 @@ a {
         font-size: 3rem;
     }
 
-    
+
     h2 {
         font-size: 2.5rem;
     }
-    
-    
+
+
     #good-luck {
         font-size: 2rem;
         margin-top: 50px;
     }
-    
+
     p {
         font-size: 24px;
     }
-    
+
     #choices button {
         max-width: 400px;
         margin-top: 10px;
@@ -500,6 +511,7 @@ a {
     #name::placeholder {
         font-size: 25px;
     }
+
     .text-field {
         height: 70%;
     }
@@ -509,6 +521,7 @@ a {
         max-width: 400px;
     }
 }
+
 /* Medium screens with a width between 768px and 992px in portrait */
 @media only screen and (min-width: 768px) and (height: 1024px) {
     body {
@@ -542,17 +555,17 @@ a {
         font-size: 2.5rem;
     }
 
-    
+
     h2 {
         font-size: 2rem;
     }
-    
-    
+
+
     #good-luck {
         font-size: 1.5rem;
         margin-top: 20px;
     }
-    
+
     p {
         font-size: 24px;
     }
@@ -566,9 +579,11 @@ a {
     #name {
         max-width: 400px;
     }
+
     #error {
         margin-top: 200px;
     }
+
     h1 {
         font-size: 50px;
     }

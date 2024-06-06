@@ -195,7 +195,7 @@ function createQuestion() {
     const randomQuestion = quizStructureCopy[randomIndex];
     const newArrayWithoutIndex = removeIndexFromArray(quizStructureCopy, randomIndex);
     quizStructureCopy = newArrayWithoutIndex;
-    if (quizStructureCopy > 0) {
+    if (quizStructureCopy > 1) {
         quizStructureCopy;
     }
 
@@ -221,13 +221,15 @@ function createQuestion() {
     }
 
 
-    if (quizStructureCopy.length === 0) {
-        window.location.href = 'score.html';
-    }
-
-
-    const audioPlayer = document.getElementById('audio-player');
+    const audioPlayer = document.getElementById('audio-player'); // Pause the audio player before loading the next question
     audioPlayer.src = randomQuestion.audio.url;
+}
+
+/**
+ * Redirects to the score page.
+ */
+function goToScorePage() {
+    window.location.href = 'score.html';
 }
 
 /**
@@ -252,8 +254,14 @@ function removeIndexFromArray(arr, index) {
  * 
  */
 function createAnswerEventListener(correctAnswer, pickedAnswer) {
-    const answerEventListener = () => {
+    const answerEventListener = (event) => {
+
+        const buttons = document.getElementById('choices').children;
+
+        event.target.disabled = true;
+
         const isCorrect = correctAnswer === pickedAnswer;
+
         if (isCorrect) {
             scoreCounter(1, 0);
 
@@ -261,9 +269,22 @@ function createAnswerEventListener(correctAnswer, pickedAnswer) {
             scoreCounter(0, 1);
         }
         recolorButtonsAccordingToCorrectAnswer(pickedAnswer, correctAnswer);
-        setTimeout(createQuestion, 1000);
         const player = document.getElementById('audio-player');
         player.pause();
+
+        for (let button of buttons) {
+            button.disabled = true;
+        }
+
+        if (quizStructureCopy.length === 0) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(goToScorePage());
+                }, 1000);
+            });
+        } else {
+            setTimeout(createQuestion, 1000);
+        }
     }
     return answerEventListener;
 }
@@ -302,6 +323,9 @@ function scoreCounter(correctPoints, incorrectPoints) {
     localStorage.setItem('incorrectScore', incorrectCounter);
 }
 
+// Add a variable to track the audio state
+let audioMuted = false;
+
 
 /**
  * Triggers to play audio
@@ -309,7 +333,13 @@ function scoreCounter(correctPoints, incorrectPoints) {
 function audioPlay() {
     const audioPlayer = document.getElementById('audio-player');
 
-    audioPlayer.play();
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        audioMuted = false;
+    } else {
+        audioPlayer.pause();
+        audioMuted = true;
+    }
 }
 
 /**
