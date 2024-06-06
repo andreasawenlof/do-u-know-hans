@@ -94,7 +94,7 @@ strong {
 }
 
 /* Link buttons */
-a {
+.link-button {
     display: inline-block;
     width: 75%;
 }
@@ -263,31 +263,36 @@ a {
     max-width: 200px;
     height: 100px;
     font-size: 60px;
-    color: #A14276;
-    background-color: #3A001ECC;
-}
-
-
-#listen-button:hover {
-    background-color: #3A001EBB;
-    border: 3px solid #FFDBEEBB;
-}
-
-/* 
-#listen-button:focus {
     background-color: #A14276;
     color: #3A001EBB;
     border: 3px solid #3A001E;
     box-shadow: -1px 3px 2px 3px #3A001E;
-} */
-
-#listen-button:active {
-    background-color: #3A001E;
-    color: #FFDBEEBB;
-    border: 1px solid #FFDBEE;
 }
 
 
+#listen-button:hover {
+    border: 3px solid #FFDBEEBB;
+}
+
+/* #listen-button:focus {
+    background-color: #3A001E;
+    color: #FFDBEE;
+    border: 3px solid #A14276;
+    
+} */
+
+.button-pressed {
+    background-color: #fff;
+    color: #FFDBEE;
+    border: 3px solid #A14276;
+    box-shadow: -1px 3px 2px 3px #3A001E;
+}
+
+/* #listen-button:active {
+    background-color: #3A001E;
+    color: #FFDBEEBB;
+    border: 1px solid #FFDBEE;
+} */
 
 #score-section {
     height: 100%;
@@ -309,6 +314,10 @@ a {
 #score-field {
     display: flex;
     flex-direction: column;
+}
+
+.hidden {
+    display: none;
 }
 
 #correctScore,
@@ -351,7 +360,8 @@ a {
 
 #error {
     margin-top: 300px;
-    height: 30%
+    height: 30%;
+    padding-bottom: 30px;
 }
 
 #error h3 {
@@ -516,7 +526,7 @@ a {
         height: 70%;
     }
 
-    a {
+    .link-button {
         width: 100%;
         max-width: 400px;
     }

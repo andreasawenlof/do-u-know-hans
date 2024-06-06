@@ -30,20 +30,21 @@
 
                 <!-- Congratulations -->
                 <h1 id="goodJobName" aria-label="Well done!">Good Job</h1>
-
-                <!-- Summary of score-->
-                <h2 id="score-title">YOU SCORED:</h2>
                 <div>
-                    <p id="correctScore" aria-label="Your correct score count">0</p>
-                    <br>
-                    <p id="incorrectScore" aria-label="Your incorrect score count">0</p>
+                    <!-- Summary of score-->
+                    <h2 id="score-title" aria-label="You scored">YOU SCORED:</h2>
+                    <div>
+                        <p id="correctScore" aria-live="polite">0</p>
+                        <br>
+                        <p id="incorrectScore" aria-live="polite">0</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Play again button -->
             <div id="play-again-field">
-                <button id="play-again" class="type-one-button" aria-label="Click to play again"><a
-                        href="quiz.html">PLAY AGAIN</a></button>
+                <button id="play-again" class="type-one-button link-button" aria-label="Click to play again">PLAY
+                    AGAIN</button>
             </div>
         </section>
 
